@@ -1,0 +1,57 @@
+@import "base";
+@import "functionLib";
+@import "var";
+@import "ngClass";
+.metro{
+  .navigation-bar{
+    z-index: 20;
+    position: fixed;
+    #datepicker{
+      float: right;
+    }
+    .export-table{
+      color: #fff;
+    }
+
+  }
+  .neeya-title{
+    color: #ffffff;
+    width: 10%;
+  }
+
+  .neeya-slide{
+    z-index: 10;
+    margin-top: 45px;
+    position: fixed;
+    width: 10%;
+    min-width: 135px;
+//    float: left;
+    box-shadow: 2px 0 10px #ccc;
+    .transition(all,0.5s);
+    li{
+      font-family: 'microsoft yahei';
+    }
+  }
+}
+.neeya-show-charts{
+  .transition(all,0.5s);
+  margin-top: 45px;
+  .td-hide{
+    display: none;
+  }
+  padding: 10px;
+  float: right;
+  #neeya-table{
+    #dismiss{
+      cursor: pointer;
+    }
+    td{
+      text-align: center;
+    }
+    tr:nth-child(1){
+      th:nth-child(-n+2){
+          line-height: 50px;
+      }
+    }
+  }
+}

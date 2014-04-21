@@ -1,0 +1,73 @@
+@import "var.less";
+.border-radius (@radius: 5px) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+.get_center() {
+  margin: 0 auto;
+}
+
+.bg_default() {
+  background: center 0 no-repeat;
+}
+
+.makeButton(@w;@h;@url;@c){
+  width: @w;
+  height: @h;
+  .border-radius();
+  cursor: pointer;
+  background:@url center  no-repeat @c ;
+}
+.makeTriangle(down,@w,@color){
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: @w;
+  border-color: transparent transparent @color transparent;
+}
+.makeTriangle(right,@w,@color){
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: @w;
+  border-color: transparent @color transparent  transparent;
+}
+.makeTriangle(left,@w,@color){
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: @w;
+  border-color: transparent  transparent  transparent @color;
+}
+.makeTriangle(up,@w,@color){
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: @w;
+  border-color:@color transparent transparent  transparent;
+}
+.makeTriangle(nc,@w){
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: @w;
+}
+.transition(@property:all,@duration:1s,@timing:ease-out,@delay:0){
+  -webkit-transition: @property @duration @timing @delay;
+  -moz-transition: @property @duration @timing @delay;
+  -ms-transition: @property @duration @timing @delay;
+  -o-transition: @property @duration @timing @delay;
+  transition: @property @duration @timing @delay;
+}
+.rotate(@deg){
+  -moz-transform: rotate(@deg);
+  -webkit-transform: rotate(@deg);
+  -o-transform: rotate(@deg);
+  -ms-transform: rotate(@deg);
+  transform: rotate(@deg);
+}
+.onePxBorder(@color:@bordercolor){
+  border: 1px solid @color;
+}

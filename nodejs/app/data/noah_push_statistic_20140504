@@ -1,0 +1,2210 @@
+{
+ "dialer10000000005": {
+  "DISMISS": {
+   "NONE": {
+    "all": 4431, 
+    "user": 3162
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 229, 
+    "user": 229
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 5348, 
+    "user": 3466
+   }
+  }
+ }, 
+ "dialer10000000007": {
+  "DISMISS": {
+   "NONE": {
+    "all": 7637, 
+    "user": 7289
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 48, 
+    "user": 47
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 11696, 
+    "user": 9433
+   }
+  }
+ }, 
+ "dialer10000000006": {
+  "DISMISS": {
+   "NONE": {
+    "all": 2022, 
+    "user": 1696
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 73, 
+    "user": 73
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 2403, 
+    "user": 1879
+   }
+  }
+ }, 
+ "dialer10000000001": {
+  "DISMISS": {
+   "NONE": {
+    "all": 1084, 
+    "user": 1069
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 85, 
+    "user": 84
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 1451, 
+    "user": 1168
+   }
+  }
+ }, 
+ "dialer10000000003": {
+  "DISMISS": {
+   "NONE": {
+    "all": 62, 
+    "user": 52
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 3, 
+    "user": 3
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 65, 
+    "user": 51
+   }
+  }
+ }, 
+ "dialer10000000002": {
+  "DISMISS": {
+   "NONE": {
+    "all": 3749, 
+    "user": 3458
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 76, 
+    "user": 76
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 5188, 
+    "user": 4351
+   }
+  }
+ }, 
+ "dialer10000000009": {
+  "DISMISS": {
+   "NONE": {
+    "all": 640, 
+    "user": 369
+   }, 
+   "TOASTCLICKED": {
+    "all": 20, 
+    "user": 20
+   }, 
+   "TOASTCLOSED": {
+    "all": 37, 
+    "user": 36
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 19, 
+    "user": 19
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 899, 
+    "user": 480
+   }
+  }
+ }, 
+ "dialer10000000008": {
+  "DISMISS": {
+   "NONE": {
+    "all": 1140, 
+    "user": 836
+   }, 
+   "TOASTCLICKED": {
+    "all": 56, 
+    "user": 56
+   }, 
+   "TOASTCLOSED": {
+    "all": 27, 
+    "user": 27
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 56, 
+    "user": 56
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 1412, 
+    "user": 936
+   }
+  }
+ }, 
+ "IME_ONLINE_000009": {
+  "DISMISS": {
+   "NONE": {
+    "all": 17, 
+    "user": 12
+   }, 
+   "APPLAUNCHED": {
+    "all": 1, 
+    "user": 1
+   }, 
+   "TOASTCLOSED": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 18, 
+    "user": 13
+   }
+  }
+ }, 
+ "IME_ONLINE_000008": {
+  "DISMISS": {
+   "NONE": {
+    "all": 8, 
+    "user": 8
+   }, 
+   "TOASTCLICKED": {
+    "all": 5, 
+    "user": 5
+   }, 
+   "TOASTCLOSED": {
+    "all": 7, 
+    "user": 7
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 5, 
+    "user": 5
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 18, 
+    "user": 16
+   }
+  }
+ }, 
+ "dialer10100000107": {
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 3, 
+    "user": 3
+   }, 
+   "TOASTCLICKED": {
+    "all": 2, 
+    "user": 2
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 2, 
+    "user": 2
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 5, 
+    "user": 5
+   }
+  }
+ }, 
+ "dialer10100000106": {
+  "DISMISS": {
+   "NONE": {
+    "all": 2, 
+    "user": 2
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 2, 
+    "user": 2
+   }
+  }
+ }, 
+ "IME_ONLINE_000007": {
+  "DISMISS": {
+   "TOASTDCLEANED": {
+    "all": 74733, 
+    "user": 67211
+   }, 
+   "NONE": {
+    "all": 112356, 
+    "user": 112298
+   }, 
+   "TOASTCLICKED": {
+    "all": 31049, 
+    "user": 30968
+   }, 
+   "TOASTCLOSED": {
+    "all": 3831, 
+    "user": 1875
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 32507, 
+    "user": 31898
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 261823, 
+    "user": 225879
+   }
+  }
+ }, 
+ "IME_ONLINE_000006": {
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 4, 
+    "user": 4
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 2926, 
+    "user": 2752
+   }
+  }
+ }, 
+ "IME_ONLINE_000005": {
+  "DISMISS": {
+   "APPLAUNCHED": {
+    "all": 64, 
+    "user": 64
+   }, 
+   "NONE": {
+    "all": 3719, 
+    "user": 3563
+   }, 
+   "TOASTDCLEANED": {
+    "all": 30, 
+    "user": 30
+   }, 
+   "TOASTCLOSED": {
+    "all": 82, 
+    "user": 82
+   }, 
+   "TOASTCLICKED": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 66, 
+    "user": 65
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 7169, 
+    "user": 6676
+   }
+  }
+ }, 
+ "dialerpro10000000005": {
+  "DISMISS": {
+   "NONE": {
+    "all": 1133, 
+    "user": 649
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 1215, 
+    "user": 673
+   }
+  }
+ }, 
+ "dialerpro10000000004": {
+  "DISMISS": {
+   "NONE": {
+    "all": 238, 
+    "user": 214
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 6, 
+    "user": 6
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 270, 
+    "user": 231
+   }
+  }
+ }, 
+ "dialerpro10000000003": {
+  "DISMISS": {
+   "NONE": {
+    "all": 284, 
+    "user": 222
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 11, 
+    "user": 11
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 323, 
+    "user": 245
+   }
+  }
+ }, 
+ "dialerpro10000000002": {
+  "DISMISS": {
+   "NONE": {
+    "all": 173, 
+    "user": 153
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 4, 
+    "user": 4
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 200, 
+    "user": 165
+   }
+  }
+ }, 
+ "dialer10000000010": {
+  "DISMISS": {
+   "NONE": {
+    "all": 175, 
+    "user": 147
+   }, 
+   "TOASTCLICKED": {
+    "all": 14, 
+    "user": 14
+   }, 
+   "TOASTCLOSED": {
+    "all": 8, 
+    "user": 8
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 14, 
+    "user": 14
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 213, 
+    "user": 167
+   }
+  }
+ }, 
+ "dialer10100000118": {
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 3, 
+    "user": 3
+   }, 
+   "NONE": {
+    "all": 10, 
+    "user": 10
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 15, 
+    "user": 15
+   }
+  }
+ }, 
+ "dialer10100000119": {
+  "DOWNLOAD": {
+   "START": {
+    "all": 3, 
+    "user": 3
+   }, 
+   "FINISH": {
+    "all": 11, 
+    "user": 10
+   }
+  }, 
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 113, 
+    "user": 110
+   }, 
+   "TOASTCLICKED": {
+    "all": 18, 
+    "user": 18
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 18, 
+    "user": 18
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 131, 
+    "user": 126
+   }
+  }
+ }, 
+ "dialer10100000116": {
+  "DISMISS": {
+   "NONE": {
+    "all": 3, 
+    "user": 3
+   }, 
+   "TOASTCLOSED": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 9, 
+    "user": 7
+   }
+  }
+ }, 
+ "dialer10100000117": {
+  "DOWNLOAD": {
+   "START": {
+    "all": 1, 
+    "user": 1
+   }, 
+   "FINISH": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 15, 
+    "user": 15
+   }, 
+   "TOASTCLICKED": {
+    "all": 6, 
+    "user": 6
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 6, 
+    "user": 6
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 17, 
+    "user": 17
+   }
+  }
+ }, 
+ "dialer10100000114": {
+  "DISMISS": {
+   "NONE": {
+    "all": 683, 
+    "user": 655
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 55, 
+    "user": 49
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 866, 
+    "user": 751
+   }
+  }
+ }, 
+ "dialer10100000115": {
+  "DOWNLOAD": {
+   "FINISH": {
+    "all": 2, 
+    "user": 2
+   }
+  }, 
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 10, 
+    "user": 10
+   }, 
+   "TOASTCLICKED": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 12, 
+    "user": 12
+   }
+  }
+ }, 
+ "IME_ONLINE_00000K": {
+  "DISMISS": {
+   "NONE": {
+    "all": 61, 
+    "user": 60
+   }, 
+   "TOASTCLICKED": {
+    "all": 38, 
+    "user": 35
+   }, 
+   "TOASTCLOSED": {
+    "all": 36, 
+    "user": 32
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 40, 
+    "user": 37
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 124, 
+    "user": 93
+   }
+  }
+ }, 
+ "IME_ONLINE_00000J": {
+  "DISMISS": {
+   "TOASTCLICKED": {
+    "all": 1272, 
+    "user": 1272
+   }, 
+   "NONE": {
+    "all": 27590, 
+    "user": 27583
+   }, 
+   "TOASTDCLEANED": {
+    "all": 3471, 
+    "user": 3471
+   }, 
+   "TOASTCLOSED": {
+    "all": 11, 
+    "user": 11
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 1272, 
+    "user": 1272
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 33638, 
+    "user": 33562
+   }
+  }
+ }, 
+ "IME_ONLINE_00000U:LOGO_FUNC_BAR": {
+  "CLICK": {
+   "NONE": {
+    "all": 161923, 
+    "user": 77415
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 2083389, 
+    "user": 465735
+   }
+  }
+ }, 
+ "IME_ONLINE_00000N": {
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 5, 
+    "user": 4
+   }, 
+   "NONE": {
+    "all": 3, 
+    "user": 3
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 9, 
+    "user": 6
+   }
+  }
+ }, 
+ "IME_ONLINE_00000M": {
+  "DISMISS": {
+   "NONE": {
+    "all": 55, 
+    "user": 55
+   }, 
+   "TOASTCLICKED": {
+    "all": 6, 
+    "user": 6
+   }, 
+   "TOASTCLOSED": {
+    "all": 2, 
+    "user": 2
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 6, 
+    "user": 6
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 65, 
+    "user": 63
+   }
+  }
+ }, 
+ "IME_ONLINE_00000L": {
+  "DISMISS": {
+   "NONE": {
+    "all": 10, 
+    "user": 10
+   }, 
+   "TOASTCLICKED": {
+    "all": 3, 
+    "user": 3
+   }, 
+   "TOASTCLOSED": {
+    "all": 3, 
+    "user": 3
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 3, 
+    "user": 3
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 198, 
+    "user": 21
+   }
+  }
+ }, 
+ "IME_ONLINE_00000G": {
+  "DISMISS": {
+   "TOASTCLICKED": {
+    "all": 23503, 
+    "user": 23472
+   }, 
+   "NONE": {
+    "all": 65829, 
+    "user": 65790
+   }, 
+   "TOASTDCLEANED": {
+    "all": 68281, 
+    "user": 62428
+   }, 
+   "TOASTCLOSED": {
+    "all": 2881, 
+    "user": 1652
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 24273, 
+    "user": 24024
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 178326, 
+    "user": 157165
+   }
+  }
+ }, 
+ "IME_ONLINE_00000F": {
+  "DISMISS": {
+   "NONE": {
+    "all": 145832, 
+    "user": 145778
+   }, 
+   "TOASTDCLEANED": {
+    "all": 11508, 
+    "user": 11499
+   }, 
+   "TOASTCLOSED": {
+    "all": 126, 
+    "user": 125
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 158937, 
+    "user": 158504
+   }
+  }
+ }, 
+ "IME_ONLINE_00000E": {
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 259, 
+    "user": 161
+   }, 
+   "TOASTCLICKED": {
+    "all": 61, 
+    "user": 45
+   }, 
+   "NONE": {
+    "all": 20, 
+    "user": 20
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 63, 
+    "user": 44
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 477, 
+    "user": 251
+   }
+  }
+ }, 
+ "IME_ONLINE_00000D": {
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 15, 
+    "user": 15
+   }, 
+   "TOASTCLICKED": {
+    "all": 23, 
+    "user": 23
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 23, 
+    "user": 23
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 144, 
+    "user": 118
+   }
+  }
+ }, 
+ "IME_ONLINE_00000S": {
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 449, 
+    "user": 408
+   }, 
+   "TOASTCLICKED": {
+    "all": 134, 
+    "user": 133
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 138, 
+    "user": 133
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 864, 
+    "user": 540
+   }
+  }
+ }, 
+ "IME_ONLINE_00000R": {
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 31, 
+    "user": 20
+   }, 
+   "TOASTCLICKED": {
+    "all": 23, 
+    "user": 23
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 31, 
+    "user": 27
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 124, 
+    "user": 41
+   }
+  }
+ }, 
+ "IME_ONLINE_00000Q": {
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 2, 
+    "user": 2
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 19, 
+    "user": 17
+   }
+  }
+ }, 
+ "IME_ONLINE_00000P": {
+  "DISMISS": {
+   "NONE": {
+    "all": 2, 
+    "user": 2
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 12, 
+    "user": 12
+   }
+  }
+ }, 
+ "IME_ONLINE_00000T": {
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 947, 
+    "user": 593
+   }, 
+   "TOASTCLICKED": {
+    "all": 169, 
+    "user": 164
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 222, 
+    "user": 191
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 3273, 
+    "user": 650
+   }
+  }
+ }, 
+ "dialer10000000021": {
+  "DOWNLOAD": {
+   "START": {
+    "all": 28, 
+    "user": 3
+   }, 
+   "FINISH": {
+    "all": 6, 
+    "user": 5
+   }
+  }, 
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 12, 
+    "user": 2
+   }
+  }
+ }, 
+ "10400000001": {
+  "DISMISS": {
+   "PAGEOPENED": {
+    "all": 1, 
+    "user": 1
+   }, 
+   "TOASTCLOSED": {
+    "all": 5, 
+    "user": 3
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 1074, 
+    "user": 6
+   }
+  }
+ }, 
+ "dialer10100000123": {
+  "DOWNLOAD": {
+   "START": {
+    "all": 162, 
+    "user": 65
+   }, 
+   "FINISH": {
+    "all": 86, 
+    "user": 75
+   }
+  }, 
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 608, 
+    "user": 536
+   }, 
+   "TOASTCLICKED": {
+    "all": 138, 
+    "user": 134
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 140, 
+    "user": 136
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 755, 
+    "user": 651
+   }
+  }
+ }, 
+ "dialer10100000122": {
+  "DOWNLOAD": {
+   "START": {
+    "all": 7, 
+    "user": 7
+   }
+  }, 
+  "DISMISS": {
+   "NONE": {
+    "all": 129, 
+    "user": 124
+   }, 
+   "TOASTCLICKED": {
+    "all": 3, 
+    "user": 3
+   }, 
+   "TOASTCLOSED": {
+    "all": 13, 
+    "user": 13
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 7, 
+    "user": 7
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 178, 
+    "user": 160
+   }
+  }
+ }, 
+ "dialer10100000121": {
+  "DOWNLOAD": {
+   "START": {
+    "all": 3, 
+    "user": 2
+   }, 
+   "FINISH": {
+    "all": 6, 
+    "user": 6
+   }
+  }, 
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 33, 
+    "user": 32
+   }, 
+   "TOASTCLICKED": {
+    "all": 3, 
+    "user": 3
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 3, 
+    "user": 3
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 36, 
+    "user": 35
+   }
+  }
+ }, 
+ "dialer10100000120": {
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 1, 
+    "user": 1
+   }, 
+   "NONE": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 3, 
+    "user": 3
+   }
+  }
+ }, 
+ "dialer10100000129": {
+  "DISMISS": {
+   "NONE": {
+    "all": 3, 
+    "user": 3
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 3, 
+    "user": 3
+   }
+  }
+ }, 
+ "dialer10100000134": {
+  "DOWNLOAD": {
+   "START": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "DISMISS": {
+   "NONE": {
+    "all": 559, 
+    "user": 548
+   }, 
+   "TOASTCLICKED": {
+    "all": 1, 
+    "user": 1
+   }, 
+   "TOASTCLOSED": {
+    "all": 28, 
+    "user": 28
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "INSTALL": {
+   "START": {
+    "all": 22, 
+    "user": 22
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 664, 
+    "user": 636
+   }
+  }
+ }, 
+ "dialer10100000135": {
+  "DOWNLOAD": {
+   "START": {
+    "all": 27194, 
+    "user": 959
+   }, 
+   "FINISH": {
+    "all": 25919, 
+    "user": 17156
+   }
+  }, 
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 671, 
+    "user": 614
+   }, 
+   "TOASTCLICKED": {
+    "all": 148, 
+    "user": 145
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 148, 
+    "user": 145
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 848, 
+    "user": 765
+   }
+  }
+ }, 
+ "dialer10100000136": {
+  "DOWNLOAD": {
+   "START": {
+    "all": 2, 
+    "user": 2
+   }
+  }, 
+  "DISMISS": {
+   "NONE": {
+    "all": 78, 
+    "user": 78
+   }, 
+   "TOASTCLICKED": {
+    "all": 2, 
+    "user": 2
+   }, 
+   "TOASTCLOSED": {
+    "all": 19, 
+    "user": 13
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 2, 
+    "user": 2
+   }
+  }, 
+  "INSTALL": {
+   "START": {
+    "all": 2, 
+    "user": 2
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 132, 
+    "user": 122
+   }
+  }
+ }, 
+ "dialer10100000137": {
+  "DOWNLOAD": {
+   "START": {
+    "all": 386, 
+    "user": 84
+   }, 
+   "FINISH": {
+    "all": 206, 
+    "user": 162
+   }
+  }, 
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 151, 
+    "user": 147
+   }, 
+   "TOASTCLICKED": {
+    "all": 30, 
+    "user": 30
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 30, 
+    "user": 30
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 186, 
+    "user": 179
+   }
+  }
+ }, 
+ "dialer10100000130": {
+  "DOWNLOAD": {
+   "START": {
+    "all": 6, 
+    "user": 6
+   }, 
+   "FINISH": {
+    "all": 13, 
+    "user": 12
+   }
+  }, 
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 4, 
+    "user": 3
+   }, 
+   "TOASTCLICKED": {
+    "all": 2, 
+    "user": 2
+   }, 
+   "NONE": {
+    "all": 2, 
+    "user": 2
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 3, 
+    "user": 3
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 9, 
+    "user": 7
+   }
+  }
+ }, 
+ "dialer10100000131": {
+  "DOWNLOAD": {
+   "START": {
+    "all": 30, 
+    "user": 6
+   }, 
+   "FINISH": {
+    "all": 8, 
+    "user": 3
+   }
+  }, 
+  "DISMISS": {
+   "NONE": {
+    "all": 100, 
+    "user": 99
+   }, 
+   "TOASTCLOSED": {
+    "all": 8, 
+    "user": 8
+   }
+  }, 
+  "INSTALL": {
+   "START": {
+    "all": 11, 
+    "user": 11
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 138, 
+    "user": 130
+   }
+  }
+ }, 
+ "dialer10100000132": {
+  "DOWNLOAD": {
+   "START": {
+    "all": 8495, 
+    "user": 666
+   }, 
+   "FINISH": {
+    "all": 3098, 
+    "user": 2286
+   }
+  }, 
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 289, 
+    "user": 242
+   }, 
+   "TOASTCLICKED": {
+    "all": 132, 
+    "user": 126
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 134, 
+    "user": 128
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 429, 
+    "user": 370
+   }
+  }
+ }, 
+ "dialer10100000138": {
+  "DOWNLOAD": {
+   "START": {
+    "all": 382, 
+    "user": 381
+   }, 
+   "FINISH": {
+    "all": 14, 
+    "user": 14
+   }
+  }, 
+  "DISMISS": {
+   "NONE": {
+    "all": 9365, 
+    "user": 9347
+   }, 
+   "TOASTCLICKED": {
+    "all": 242, 
+    "user": 241
+   }, 
+   "TOASTCLOSED": {
+    "all": 835, 
+    "user": 832
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 382, 
+    "user": 381
+   }
+  }, 
+  "INSTALL": {
+   "START": {
+    "all": 1474, 
+    "user": 1474
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 12649, 
+    "user": 12199
+   }
+  }
+ }, 
+ "dialer10100000139": {
+  "DOWNLOAD": {
+   "START": {
+    "all": 1095223, 
+    "user": 32937
+   }, 
+   "FINISH": {
+    "all": 196521, 
+    "user": 143387
+   }
+  }, 
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 33451, 
+    "user": 33393
+   }, 
+   "TOASTCLICKED": {
+    "all": 8612, 
+    "user": 8606
+   }, 
+   "NONE": {
+    "all": 6, 
+    "user": 6
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 8663, 
+    "user": 8655
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 43715, 
+    "user": 43603
+   }
+  }
+ }, 
+ "2": {
+  "DISMISS": {
+   "TOASTCLICKED": {
+    "all": 40, 
+    "user": 40
+   }, 
+   "TOASTCLOSED": {
+    "all": 317, 
+    "user": 316
+   }, 
+   "APPLAUNCHED": {
+    "all": 159, 
+    "user": 159
+   }, 
+   "TOASTDCLEANED": {
+    "all": 2, 
+    "user": 2
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 193, 
+    "user": 192
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 43254, 
+    "user": 31089
+   }
+  }
+ }, 
+ "IME_ONLINE_00000U:MORE_ONLINE_STORE": {
+  "CLICK": {
+   "NONE": {
+    "all": 21057, 
+    "user": 21057
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 71241, 
+    "user": 45686
+   }
+  }
+ }, 
+ "dialerpro101000000004": {
+  "DISMISS": {
+   "NONE": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 1, 
+    "user": 1
+   }
+  }
+ }, 
+ "IME_ONLINE_00000U:QUICK_SETTING_AUTO_CORRECTION": {
+  "CLICK": {
+   "NONE": {
+    "all": 6123, 
+    "user": 6123
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 58588, 
+    "user": 58582
+   }
+  }
+ }, 
+ "IME_ONLINE_00000U:MORE_TOUCHPAL_CLOUD": {
+  "CLICK": {
+   "NONE": {
+    "all": 20887, 
+    "user": 20887
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 71487, 
+    "user": 46027
+   }
+  }
+ }, 
+ "IME_ONLINE_00000U:PAOPAO_TAB_MORE": {
+  "CLICK": {
+   "NONE": {
+    "all": 69387, 
+    "user": 47439
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 138425, 
+    "user": 80877
+   }
+  }
+ }, 
+ "dialerpro101000000005": {
+  "DISMISS": {
+   "NONE": {
+    "all": 6, 
+    "user": 6
+   }, 
+   "TOASTCLOSED": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 8, 
+    "user": 8
+   }
+  }
+ }, 
+ "IME_ONLINE_00000O": {
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 403, 
+    "user": 284
+   }, 
+   "TOASTCLICKED": {
+    "all": 69, 
+    "user": 67
+   }, 
+   "NONE": {
+    "all": 367, 
+    "user": 367
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 94, 
+    "user": 83
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 899, 
+    "user": 521
+   }
+  }
+ }, 
+ "dialerpro101000000006": {
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 5, 
+    "user": 4
+   }, 
+   "TOASTCLICKED": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 7, 
+    "user": 6
+   }
+  }
+ }, 
+ "dialerpro101000000003": {
+  "DISMISS": {
+   "NONE": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 1, 
+    "user": 1
+   }
+  }
+ }, 
+ "dialerpro101000000002": {
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 1, 
+    "user": 1
+   }, 
+   "TOASTCLICKED": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 2, 
+    "user": 2
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 3, 
+    "user": 2
+   }
+  }
+ }, 
+ "dialerpro101000000009": {
+  "DISMISS": {
+   "NONE": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 1, 
+    "user": 1
+   }
+  }
+ }, 
+ "dialer10100000010": {
+  "DISMISS": {
+   "NONE": {
+    "all": 6, 
+    "user": 4
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 6, 
+    "user": 5
+   }
+  }
+ }, 
+ "IME_ONLINE_00000U:PAOPAO_TAB_QUICK_SETTING": {
+  "CLICK": {
+   "NONE": {
+    "all": 19637, 
+    "user": 18987
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 65887, 
+    "user": 61721
+   }
+  }
+ }, 
+ "dialer10100000015": {
+  "DISMISS": {
+   "NONE": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 1, 
+    "user": 1
+   }
+  }
+ }, 
+ "1": {
+  "DISMISS": {
+   "TOASTCLICKED": {
+    "all": 49, 
+    "user": 49
+   }, 
+   "TOASTCLOSED": {
+    "all": 616, 
+    "user": 602
+   }, 
+   "APPLAUNCHED": {
+    "all": 600, 
+    "user": 580
+   }, 
+   "TOASTDCLEANED": {
+    "all": 2, 
+    "user": 2
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 650, 
+    "user": 627
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 67203, 
+    "user": 30207
+   }
+  }
+ }, 
+ "dialerpro101000000016": {
+  "DOWNLOAD": {
+   "START": {
+    "all": 101, 
+    "user": 4
+   }, 
+   "FINISH": {
+    "all": 23, 
+    "user": 15
+   }
+  }, 
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 24, 
+    "user": 18
+   }, 
+   "TOASTCLICKED": {
+    "all": 4, 
+    "user": 4
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 4, 
+    "user": 4
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 29, 
+    "user": 22
+   }
+  }
+ }, 
+ "dialerpro101000000017": {
+  "DOWNLOAD": {
+   "START": {
+    "all": 9, 
+    "user": 9
+   }, 
+   "FINISH": {
+    "all": 7, 
+    "user": 7
+   }
+  }, 
+  "DISMISS": {
+   "NONE": {
+    "all": 707, 
+    "user": 704
+   }, 
+   "TOASTCLICKED": {
+    "all": 2, 
+    "user": 2
+   }, 
+   "TOASTCLOSED": {
+    "all": 25, 
+    "user": 25
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 9, 
+    "user": 9
+   }
+  }, 
+  "INSTALL": {
+   "START": {
+    "all": 23, 
+    "user": 23
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 757, 
+    "user": 730
+   }
+  }
+ }, 
+ "dialerpro101000000014": {
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 2, 
+    "user": 1
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 2, 
+    "user": 1
+   }
+  }
+ }, 
+ "dialerpro101000000015": {
+  "DISMISS": {
+   "NONE": {
+    "all": 13, 
+    "user": 13
+   }, 
+   "TOASTCLOSED": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "INSTALL": {
+   "START": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 18, 
+    "user": 18
+   }
+  }
+ }, 
+ "dialerpro101000000012": {
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 1, 
+    "user": 1
+   }, 
+   "TOASTCLICKED": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 2, 
+    "user": 2
+   }
+  }
+ }, 
+ "dialerpro101000000010": {
+  "DOWNLOAD": {
+   "FINISH": {
+    "all": 1, 
+    "user": 1
+   }
+  }
+ }, 
+ "dialerpro101000000011": {
+  "DISMISS": {
+   "NONE": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 1, 
+    "user": 1
+   }
+  }
+ }, 
+ "dialerpro101000000018": {
+  "DOWNLOAD": {
+   "START": {
+    "all": 5588, 
+    "user": 200
+   }, 
+   "FINISH": {
+    "all": 2894, 
+    "user": 2583
+   }
+  }, 
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 1467, 
+    "user": 1374
+   }, 
+   "TOASTCLICKED": {
+    "all": 234, 
+    "user": 226
+   }, 
+   "NONE": {
+    "all": 1, 
+    "user": 1
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 235, 
+    "user": 226
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 1657, 
+    "user": 1540
+   }
+  }
+ }, 
+ "dialer10100000004": {
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 1039, 
+    "user": 1039
+   }, 
+   "TOASTCLICKED": {
+    "all": 90, 
+    "user": 90
+   }, 
+   "NONE": {
+    "all": 9708, 
+    "user": 9339
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 90, 
+    "user": 90
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 11945, 
+    "user": 11179
+   }
+  }
+ }, 
+ "dialer10100000005": {
+  "DISMISS": {
+   "NONE": {
+    "all": 639, 
+    "user": 602
+   }, 
+   "TOASTCLICKED": {
+    "all": 6, 
+    "user": 6
+   }, 
+   "TOASTCLOSED": {
+    "all": 93, 
+    "user": 93
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 6, 
+    "user": 6
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 840, 
+    "user": 721
+   }
+  }
+ }, 
+ "dialer10100000006": {
+  "DISMISS": {
+   "NONE": {
+    "all": 17, 
+    "user": 17
+   }, 
+   "TOASTCLICKED": {
+    "all": 2, 
+    "user": 2
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 19, 
+    "user": 19
+   }
+  }
+ }, 
+ "dialer10100000007": {
+  "DISMISS": {
+   "NONE": {
+    "all": 449, 
+    "user": 443
+   }, 
+   "TOASTCLICKED": {
+    "all": 2, 
+    "user": 2
+   }, 
+   "TOASTCLOSED": {
+    "all": 71, 
+    "user": 68
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 3, 
+    "user": 3
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 652, 
+    "user": 630
+   }
+  }
+ }, 
+ "dialer10100000001": {
+  "DISMISS": {
+   "NONE": {
+    "all": 3, 
+    "user": 3
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 3, 
+    "user": 3
+   }
+  }
+ }, 
+ "dialer10100000002": {
+  "DISMISS": {
+   "NONE": {
+    "all": 937, 
+    "user": 924
+   }, 
+   "TOASTCLICKED": {
+    "all": 5, 
+    "user": 5
+   }, 
+   "TOASTCLOSED": {
+    "all": 145, 
+    "user": 144
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 6, 
+    "user": 6
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 1142, 
+    "user": 1105
+   }
+  }
+ }, 
+ "dialer10100000003": {
+  "DISMISS": {
+   "NONE": {
+    "all": 13759, 
+    "user": 12868
+   }, 
+   "TOASTCLICKED": {
+    "all": 213, 
+    "user": 213
+   }, 
+   "TOASTCLOSED": {
+    "all": 1041, 
+    "user": 1039
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 215, 
+    "user": 214
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 15742, 
+    "user": 14183
+   }
+  }
+ }, 
+ "IME_ONLINE_00000U:MORE_HOT_WORD": {
+  "CLICK": {
+   "NONE": {
+    "all": 11718, 
+    "user": 11646
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 31628, 
+    "user": 21481
+   }
+  }
+ }, 
+ "dialer10100000009": {
+  "DISMISS": {
+   "NONE": {
+    "all": 8, 
+    "user": 8
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 10, 
+    "user": 10
+   }
+  }
+ }, 
+ "dialer10110000001": {
+  "DISMISS": {
+   "TOASTCLOSED": {
+    "all": 8, 
+    "user": 8
+   }, 
+   "TOASTCLICKED": {
+    "all": 177, 
+    "user": 177
+   }
+  }, 
+  "CLICK": {
+   "NONE": {
+    "all": 183, 
+    "user": 183
+   }
+  }, 
+  "SHOW": {
+   "NONE": {
+    "all": 326, 
+    "user": 306
+   }
+  }
+ }
+}

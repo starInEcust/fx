@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Microsoft YaHei', 'SimHei', 'WenQuanYi Micro Hei', 'Hiragino Sans GB', sans-serif;
+  overflow: visible;
+}
+ul,
+ol,
+input,
+textarea {
+  boder: none;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+a img {
+  border: 0;
+}
+a {
+  text-decoration: none;
+}
+input {
+  outline: none;
+}
+/* 常用 */
+.clearfix:before,
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+.hide {
+  display: none;
+}
+.pr {
+  position: relative;
+}

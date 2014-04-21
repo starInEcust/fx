@@ -1,0 +1,112 @@
+<table id="neeya-table" class="table bordered hovered">
+    <thead>
+        <tr>
+            <th rowspan="2">序号</th>
+            <th rowspan="2">Push ID</th>
+            <th id="dismiss" ng-click="toggleTable()" rowspan="1" colspan="2">Dismiss</th>
+            <th rowspan="1" colspan="2">Toastclick</th>
+            <th rowspan="1" colspan="2">Toastclose</th>
+            <th ng-show="showTD" rowspan="1" colspan="2">Applaunched</th>
+            <th ng-show="showTD" rowspan="1" colspan="2">Pageopened</th>
+            <th ng-show="showTD" rowspan="1" colspan="2">Pageloaded</th>
+            <th rowspan="1" colspan="2">None</th>
+            <th rowspan="1" colspan="2">Click</th>
+            <th rowspan="1" colspan="2">Show</th>
+            <th rowspan="1" colspan="2">Click/Show</th>
+        </tr>
+        <tr>
+            <th>ALL</th>
+            <th>User</th>
+            <th>ALL</th>
+            <th>User</th>
+            <th>ALL</th>
+            <th>User</th>
+            <th ng-show="showTD">ALL</th>
+            <th ng-show="showTD">User</th>
+            <th ng-show="showTD">ALL</th>
+            <th ng-show="showTD">User</th>
+            <th ng-show="showTD">ALL</th>
+            <th ng-show="showTD">User</th>
+            <th>ALL</th>
+            <th>User</th>
+            <th>ALL</th>
+            <th>User</th>
+            <th>ALL</th>
+            <th>User</th>
+            <th>ALL</th>
+            <th>User</th>
+        </tr>
+    <!--<tr>-->
+        <!--<th rowspan="2">内容</th>-->
+        <!--<th rowspan="2">类型</th>-->
+        <!--<th rowspan="2">Date</th>-->
+        <!--<th rowspan="1" colspan="2">推送</th>-->
+        <!--<th rowspan="2">推送点击率</th>-->
+        <!--<th rowspan="1" colspan="3">Emoji page</th>-->
+        <!--<th rowspan="1" colspan="3">wechat page</th>-->
+    <!--</tr>-->
+    <!--<tr>-->
+        <!--<th rowspan="1">show</th>-->
+        <!--<th rowspan="1">click</th>-->
+        <!--<th rowspan="1">PV</th>-->
+        <!--<th rowspan="1">UV</th>-->
+        <!--<th rowspan="1">平均页面停留时间</th>-->
+        <!--<th rowspan="1">PV</th>-->
+        <!--<th rowspan="1">UV</th>-->
+        <!--<th rowspan="1">平均页面停留时间</th>-->
+    <!--</tr>-->
+    </thead>
+    <tbody>
+    <tr ng-repeat="(name,val) in mydata">
+        <td ng-bind="$index"></td>
+        <td ng-bind="name"></td>
+        <td ng-bind=""></td>
+        <td ng-bind=""></td>
+        <td ng-bind="val.DISMISS.TOASTCLICKED.all"></td>
+        <td ng-bind="val.DISMISS.TOASTCLICKED.user"></td>
+        <td ng-bind="val.DISMISS.TOASTCLOSED.all"></td>
+        <td ng-bind="val.DISMISS.TOASTCLOSED.user"></td>
+        <td ng-show="showTD" ng-bind=""></td>
+        <td ng-show="showTD" ng-bind=""></td>
+        <td ng-show="showTD" ng-bind=""></td>
+        <td ng-show="showTD" ng-bind=""></td>
+        <td ng-show="showTD" ng-bind=""></td>
+        <td ng-show="showTD" ng-bind=""></td>
+        <td ng-bind="val.DISMISS.NONE.all"></td>
+        <td ng-bind="val.DISMISS.NONE.user"></td>
+        <td ng-bind="val.CLICK.NONE.all"></td>
+        <td ng-bind="val.CLICK.NONE.user"></td>
+        <td ng-bind="val.SHOW.NONE.all"></td>
+        <td ng-bind="val.SHOW.NONE.user"></td>
+        <td ng-bind="val.CLICK.NONE.all/val.SHOW.NONE.all  | percent ">%</td>
+        <td ng-bind="val.CLICK.NONE.user/val.SHOW.NONE.user  | percent">%</td>
+    </tr>
+    </tbody>
+</table>
+<!--<div ng-init="friends = [{name:'John', phone:'555-1276'},-->
+                         <!--{name:'Mary', phone:'800-BIG-MARY'},-->
+                         <!--{name:'Mike', phone:'555-4321'},-->
+                         <!--{name:'Adam', phone:'555-5678'},-->
+                         <!--{name:'Julie', phone:'555-8765'},-->
+                         <!--{name:'Juliette', phone:'555-5678'}]"></div>-->
+
+<!--Search: <input ng-model="searchText">-->
+<!--<table id="searchTextResults">-->
+    <!--<tr><th>Name</th><th>Phone</th></tr>-->
+    <!--<tr ng-repeat="friend in friends | filter:searchText">-->
+        <!--<td>{{friend.name}}</td>-->
+        <!--<td>{{friend.phone}}</td>-->
+    <!--</tr>-->
+<!--</table>-->
+<!--<hr>-->
+<!--Any: <input ng-model="search.$"> <br>-->
+<!--Name only <input ng-model="search.name"><br>-->
+<!--Phone only <input ng-model="search.phone"><br>-->
+<!--Equality <input type="checkbox" ng-model="strict"><br>-->
+<!--<table id="searchObjResults">-->
+    <!--<tr><th>Name</th><th>Phone</th></tr>-->
+    <!--<tr ng-repeat="friendObj in friends | filter:search:strict">-->
+        <!--<td>{{friendObj.name}}</td>-->
+        <!--<td>{{friendObj.phone}}</td>-->
+    <!--</tr>-->
+<!--</table>-->
