@@ -29,9 +29,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-
 var jsonData = null;
-
 
 app.get('/', function(req,res){
     res.sendfile('app/index.html');
@@ -64,18 +62,7 @@ app.post('/timeBucket',getdata.timeBucket);
 //    path: '/truedata.json'
 //};
 //
-//http.get(options, function(res) {
-//    var data1 = res;
-//    console.log("Got response: " + data1);
-//    res.on('data', function(data) {
-//        console.log("Got data: " + data);
-//    });
-////    res.on('end',function(data){
-////
-////    })
-//}).on('error', function(e) {
-//    console.log("Got error: " + e.message);
-//});
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
