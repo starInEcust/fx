@@ -29,14 +29,13 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-var jsonData = null;
 
 app.get('/', function(req,res){
     res.sendfile('app/index.html');
 });
 app.get('/users', user.list);
 app.post('/dateData',getdata.dateData);
-app.post('/timeBucket',getdata.timeBucket);
+//app.post('/timeBucket',getdata.timeBucket);
 //var req = http.get(options, function(res) {
 //    console.log('STATUS: ' + res.statusCode);
 //    console.log('HEADERS: ' + JSON.stringify(res.headers));

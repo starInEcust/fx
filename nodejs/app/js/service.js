@@ -12,6 +12,7 @@ app.factory('dateData', ['$http', '$q', function ($http, $q) {
 //                console.log(data);
                 $.each(data, function (key, val) {
                     if (!regex.test(key)) {
+                        delete data[key];
                     }
                 });
                 deferred.resolve(data);

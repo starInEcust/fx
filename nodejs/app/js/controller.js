@@ -14,11 +14,11 @@ var mainTableControl = ['$scope','dateData' , '$http',function mainTableControl(
         $scope.showTD = !$scope.showTD;
 
     };
-    $http.post('timeBucket', {'dateStart': '20140410','dateEnd':'20140412'}).success(function (data) {
-        console.log(data);
-    }).error(function (err) {
-        alert(err)
-    });
+//    $http.post('timeBucket', {'dateStart': '20140410','dateEnd':'20140412'}).success(function (data) {
+//        console.log(data);
+//    }).error(function (err) {
+//        alert(err)
+//    });
 
 }];
 var mainControl = ['$scope', function navControl($scope) {
