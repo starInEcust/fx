@@ -211,7 +211,7 @@ pip-log.txt
 #Translations
 *.mo
 
-#Mr Developer
+#Mr Developer fx
 .mr.developer.cfg
 nodejs/.idea/
 nodejs/app/.idea/
