@@ -10,6 +10,7 @@ app.filter('percent', function () {
 //        var percent = (num*100000).toString();
 //        console.log((percent.slice(0,4)/1000)+'%');
 //        return (percent.slice(0,4)/1000)+'%';
+        //mmmmm
     }
 });
 
