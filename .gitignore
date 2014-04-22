@@ -213,6 +213,12 @@ pip-log.txt
 
 #Mr Developer fx
 .mr.developer.cfg
-nodejs/.idea/
+.idea/
 nodejs/app/.idea/
 nodejs/node_modules/
+nodejs/app/js/*.BACKUP.*.js
+nodejs/app/js/*.LOCAL.*.js
+nodejs/app/js/*.REMOTE.*.js
+nodejs/app/js/*.orig
+nodejs/app/js/*.BASE.*.js
+nodejs/app/js/*.REMOTE.*.js
