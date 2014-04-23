@@ -9,17 +9,9 @@ app.factory('dateData', ['$http', '$q', function ($http, $q) {
             var regex = /^IME_ONLINE/i;
             var self = this;
             $http.post('dateData', {'date': date}).success(function (data) {
-//                console.log(data);
-                $.each(data, function (key, val) {
-                    if (!regex.test(key)) {
-                        delete data[key];
-                    }
-                });
                 deferred.resolve(data);
-//                console.log(self.data);
-
             }).error(function (err) {
-                alert(err)
+                console.log(err);
             });
             return deferred.promise;
         }

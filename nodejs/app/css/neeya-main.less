@@ -20,13 +20,14 @@
   }
 
   .neeya-slide{
-    z-index: 10;
+    z-index: 7;
     margin-top: 45px;
     position: fixed;
     width: 10%;
     min-width: 135px;
 //    float: left;
     box-shadow: 2px 0 10px #ccc;
+    transition: 1s;
     .transition(all,0.5s);
     li{
       font-family: 'microsoft yahei';
@@ -42,6 +43,9 @@
   padding: 10px;
   float: right;
   #neeya-table{
+    thead{
+      position: relative;
+    }
     #dismiss{
       cursor: pointer;
     }

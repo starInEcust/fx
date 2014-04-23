@@ -80,33 +80,37 @@ input {
   width: 10%;
 }
 .metro .neeya-slide {
-  z-index: 10;
+  z-index: 7;
   margin-top: 45px;
   position: fixed;
   width: 10%;
   min-width: 135px;
   box-shadow: 2px 0 10px #ccc;
-  -webkit-transition: all 0.5s ease-out 0;
-  -moz-transition: all 0.5s ease-out 0;
-  -ms-transition: all 0.5s ease-out 0;
-  -o-transition: all 0.5s ease-out 0;
-  transition: all 0.5s ease-out 0;
+  transition: 1s;
+  -webkit-transition: all 0.5s ease 0;
+  -moz-transition: all 0.5s ease 0;
+  -ms-transition: all 0.5s ease 0;
+  -o-transition: all 0.5s ease 0;
+  transition: all 0.5s ease 0;
 }
 .metro .neeya-slide li {
   font-family: 'microsoft yahei';
 }
 .neeya-show-charts {
-  -webkit-transition: all 0.5s ease-out 0;
-  -moz-transition: all 0.5s ease-out 0;
-  -ms-transition: all 0.5s ease-out 0;
-  -o-transition: all 0.5s ease-out 0;
-  transition: all 0.5s ease-out 0;
+  -webkit-transition: all 0.5s ease 0;
+  -moz-transition: all 0.5s ease 0;
+  -ms-transition: all 0.5s ease 0;
+  -o-transition: all 0.5s ease 0;
+  transition: all 0.5s ease 0;
   margin-top: 45px;
   padding: 10px;
   float: right;
 }
 .neeya-show-charts .td-hide {
   display: none;
+}
+.neeya-show-charts #neeya-table thead {
+  position: relative;
 }
 .neeya-show-charts #neeya-table #dismiss {
   cursor: pointer;

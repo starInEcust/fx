@@ -4,18 +4,20 @@
 var fs = require('fs');
 var fullData = {};
 module.exports = {
-    'dateData':function(req,response){
+    'dateData': function (req, response) {
         var date = req.body.date;
-
-//    console.log(fullData);
-        fs.readFile('app/data/noah_push_statistic_'+date,{'encoding':'utf-8'},function(err,data){
-//            console.log(data);
-
-            response.send(data);
+        fs.readFile('app/data/noah_push_statistic_' + date, {'encoding': 'utf-8'}, function (err, data) {
+            var regex = /^IME_ONLINE/i;
+            
+            var a = eval("(" + data + ")");
+            for (var key in a) {
+                if (!regex.test(key)) {
+                    delete a[key];
+                }
+            }
+            var json = JSON.stringify(a);
+            response.send(json);
         });
-//    console.log(req);
-//    console.log('app/data/'+date+'.json');
-
     }
 //    'timeBucket':function(request,response){
 ////

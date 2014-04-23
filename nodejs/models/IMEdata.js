@@ -38,7 +38,7 @@ var imeSchema = new Schema({
     }
 
 });
-var IMEModel = mongodb.mongoose.model('IME','imeSchema');
+var IMEModel = mongodb.mongoose.model('IME',imeSchema);
 var dbFunc = function(){};
 
 dbFunc.prototype.save = function(obj, callback) {
