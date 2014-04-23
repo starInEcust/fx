@@ -6,9 +6,10 @@ var fullData = {};
 module.exports = {
     'dateData': function (req, response) {
         var date = req.body.date;
+        var regexFlag = req.body.Flag;
         fs.readFile('app/data/noah_push_statistic_' + date, {'encoding': 'utf-8'}, function (err, data) {
             var regex = /^IME_ONLINE/i;
-            
+
             var a = eval("(" + data + ")");
             for (var key in a) {
                 if (!regex.test(key)) {

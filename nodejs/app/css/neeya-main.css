@@ -75,6 +75,29 @@ input {
 .metro .navigation-bar .export-table {
   color: #fff;
 }
+.metro .navigation-bar .select-type {
+  width: 175px;
+  text-align: center;
+}
+.metro .navigation-bar .select-type .dropdown-toggle:after {
+  content: '';
+}
+.metro .navigation-bar .select-type i {
+  font-size: 12px !IMPORTANT;
+}
+.metro .navigation-bar .select-type ul {
+  min-width: 175px;
+}
+.metro .navigation-bar .select-type li {
+  cursor: pointer;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #DCDDDE;
+}
+.metro .navigation-bar .select-type li:last-child {
+  border-bottom: none;
+}
 .metro .neeya-title {
   color: #ffffff;
   width: 10%;

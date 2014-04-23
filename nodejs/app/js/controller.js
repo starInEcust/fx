@@ -7,6 +7,7 @@ var mainTableControl = ['$scope','dateData' , '$http',function mainTableControl(
         $scope.mydata = data;
     });
     $scope.$on( 'date.update', function( event ) {
+        console.log('up');
         $scope.mydata = dateData.data;
     });
 
@@ -21,7 +22,7 @@ var mainTableControl = ['$scope','dateData' , '$http',function mainTableControl(
 //    });
 
 }];
-var mainControl = ['$scope', function navControl($scope) {
+var mainControl = ['$scope', '$rootScope',function navControl($scope,$rootScope) {
     $scope.isright = true;
     $scope.isfull = false;
     $scope.isShow = true;
@@ -31,7 +32,8 @@ var mainControl = ['$scope', function navControl($scope) {
         $scope.isfull = !$scope.isfull;
         $scope.isHide = !$scope.isHide;
         $scope.isShow = !$scope.isShow;
-    }
+    };
+    $rootScope.chartType = '输入法OEM版数据';
 
 }];
 var chartControl = ['$scope',function chartControl($scope){

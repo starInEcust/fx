@@ -24,11 +24,9 @@ app.directive('selectTable', ['dateData', '$rootScope', function (dateData, $roo
                 selected: function () {
                     if(oldDate == getDate()){return}
                     oldDate = getDate();
-//                    console.log('change');
-//                    console.log('new' + getDate());
                     dateData.getData(getDate()).then(function (data) {
                         dateData.data = data;
-                        console.log(dateData.data);
+//                        console.log(dateData.data);
                         $rootScope.$broadcast('date.update');
                     });
 //                console.log(dateData.data)
@@ -37,6 +35,7 @@ app.directive('selectTable', ['dateData', '$rootScope', function (dateData, $roo
             function getDate() {
                 var date = elem.find('#datepicker input').val();
                 date = date.split('.').reverse().join('');
+                $rootScope.date = date;
                 return date;
             }
             var oldDate = getDate();
@@ -91,4 +90,22 @@ app.directive('activeLi', function () {
         }
     };
 });
-//app.directive('')
+app.directive('typeSelect',['$rootScope','dateData',function($rootScope,dateData){
+    return {
+        restrict: 'AE',
+        link: function (scope, elem, attrs) {
+            var flag = elem.text();
+            elem.on('click',function(){
+                $rootScope.chartType = flag;
+                elem.parent().siblings().find('span').text(flag);
+                dateData.getData($rootScope.date).then(function (data) {
+                    dateData.data = data;
+//                        console.log(dateData.data);
+                    $rootScope.$broadcast('date.update');
+                });
+            });
+
+
+        }
+    };
+}]);
