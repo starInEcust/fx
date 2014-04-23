@@ -6,10 +6,12 @@ var fullData = {};
 module.exports = {
     'dateData': function (req, response) {
         var date = req.body.date;
-        var regexFlag = req.body.Flag;
+        var regexFlag = req.body.flag;
+        console.log(regexFlag);
         fs.readFile('app/data/noah_push_statistic_' + date, {'encoding': 'utf-8'}, function (err, data) {
-            var regex = /^IME_ONLINE/i;
-
+            var regex = '/^'+regexFlag+'/i';
+            regex = eval(regex);
+            console.log(typeof (regex));
             var a = eval("(" + data + ")");
             for (var key in a) {
                 if (!regex.test(key)) {
@@ -17,6 +19,7 @@ module.exports = {
                 }
             }
             var json = JSON.stringify(a);
+            console.log(json);
             response.send(json);
         });
     }
