@@ -36,23 +36,13 @@ app.get('/', function(req,res){
 });
 app.get('/users', user.list);
 app.post('/dateData',getdata.dateData);
-//fs.readFile('app/data/noah_push_statistic_20140417',{'encoding':'utf-8'},function(err,data){
-//    if(err){return console.log(err) ;}
-//    var regex = /^IME_ONLINE/i;
-//    var a = eval("(" + data + ")");
-//    console.log(a.IME_ONLINE_000006.DISMISS.TOASTCLOSED.all);
-//    for(var key in a) {
-//        console.log(key+':'+data[key]);
-////        if (!regex.test(i)) {
-////            delete data[i];
-////            console.log(i);
-////            console.log(data[i]);
-////        }
-//    }
-////    ime.save(data);
-//
-//
-//});
+fs.readFile('app/data/noah_push_statistic_20140417',{'encoding':'utf-8'},function(err,data){
+    if(err){return console.log(err) ;}
+
+    ime.save(data);
+
+
+});
 //app.post('/timeBucket',getdata.timeBucket);
 //var req = http.get(options, function(res) {
 //    console.log('STATUS: ' + res.statusCode);
