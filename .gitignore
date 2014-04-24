@@ -215,7 +215,8 @@ pip-log.txt
 .mr.developer.cfg
 .idea/
 nodejs/app/.idea/
-nodejs/app/data/*
+nodejs/app/data/
+nodejs/app/data
 nodejs/node_modules/
 nodejs/app/js/*.BACKUP.*.js
 nodejs/app/js/*.LOCAL.*.js
