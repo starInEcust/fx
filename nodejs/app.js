@@ -36,13 +36,15 @@ app.get('/', function(req,res){
 });
 app.get('/users', user.list);
 app.post('/dateData',getdata.dateData);
-fs.readFile('app/data/noah_push_statistic_20140417',{'encoding':'utf-8'},function(err,data){
-    if(err){return console.log(err) ;}
+//fs.readFile('app/data/noah_push_statistic_20140417',{'encoding':'utf-8'},function(err,data){
+//    if(err){return console.log(err) ;}
+//    var a = eval("(" + data + ")");
+//    var json = JSON.stringify(a);
+//    ime.save(a);
+//
+//
+//});
 
-    ime.save(data);
-
-
-});
 //app.post('/timeBucket',getdata.timeBucket);
 //var req = http.get(options, function(res) {
 //    console.log('STATUS: ' + res.statusCode);
