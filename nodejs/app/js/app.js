@@ -17,6 +17,10 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'view/chart1.html',
             controller: 'mainTableControl'
         }).
+        when('/refresh', {
+            templateUrl: 'view/refresh.html',
+//            controller: 'mainTableControl'
+        }).
         otherwise({redirectTo: '/table'})
 }]);
 
