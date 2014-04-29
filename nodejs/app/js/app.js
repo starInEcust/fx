@@ -18,7 +18,7 @@ app.config(['$routeProvider', function ($routeProvider) {
             controller: 'mainTableControl'
         }).
         when('/refresh', {
-            templateUrl: 'view/refresh.html',
+            templateUrl: 'view/update.html'
 //            controller: 'mainTableControl'
         }).
         otherwise({redirectTo: '/table'})

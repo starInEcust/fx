@@ -11,8 +11,10 @@ var path = require('path');
 var ejs = require('ejs');
 var getdata = require('./models/getdatedata');
 var fs = require('fs');
-var ime = require('./models/IMEdata');
+//var ime = require('./models/IMEdata');
 var app = express();
+var server = require('http').createServer(app);
+var io = require('socket.io').listen(server);
 // all environments
 app.set('port', process.env.PORT || 3002);
 app.set('views', path.join(__dirname, 'views'));
@@ -35,13 +37,31 @@ app.get('/', function(req,res){
     res.sendfile('app/index.html');
 });
 app.get('/users', user.list);
+io.on('connection',function(socket){
+	console.log('client connected');
+	socket.emit('open');
+	socket.on('message',function(msg){
+//		console.log(msg.startDate);
+//		if(msg.type == 'timeBucket'){
+//			console.log('timeBucket');
+//		}
+	});
+	socket.on('timeBucket',function(data){
+		console.log(data);
+//		getdata.timeBucket(data.startDate,data.EndDate);
+
+	});
+
+});
 app.post('/dateData',getdata.dateData);
-//fs.readFile('app/data/noah_push_statistic_20140417',{'encoding':'utf-8'},function(err,data){
+//fs.readFile('app/data/noah_push_statistic_20140424',{'encoding':'utf-8'},function(err,data){
 //    if(err){return console.log(err) ;}
-//    var a = eval("(" + data + ")");
-//    var json = JSON.stringify(a);
-//    ime.save(a);
+//    var dataObj= eval("(" + data + ")");
+//    var json = JSON.stringify(dataObj);
 //
+//		ime.save({"20140424":json},function(err){
+//			console.log('aaa'+err);
+//		});
 //
 //});
 
@@ -71,6 +91,6 @@ app.post('/dateData',getdata.dateData);
 //};
 //
 
-http.createServer(app).listen(app.get('port'), function(){
+server.listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

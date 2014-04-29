@@ -24,7 +24,8 @@ app.directive('selectTable', ['dateData', '$rootScope', function (dateData, $roo
                 selected: function () {
                     if(oldDate == getDate()){return}
                     oldDate = getDate();
-                    dateData.getData(getDate()).then(function (data) {
+
+                    dateData.getData().then(function (data) {
                         dateData.data = data;
 //                        console.log(dateData.data);
                         $rootScope.$broadcast('date.update');
@@ -98,7 +99,7 @@ app.directive('typeSelect',['$rootScope','dateData',function($rootScope,dateData
             elem.on('click',function(){
                 $rootScope.chartType = flag;
                 elem.parent().siblings().find('span').text(flag);
-                dateData.getData($rootScope.date).then(function (data) {
+                dateData.getData().then(function (data) {
                     dateData.data = data;
 //                        console.log(dateData.data);
                     $rootScope.$broadcast('date.update');

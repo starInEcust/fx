@@ -4,7 +4,7 @@
 app.factory('dateData', ['$http', '$q','$rootScope', function ($http, $q, $rootScope) {
     return {
         data: '',
-        getData: function (date) {
+        getData: function () {
             var deferred = $q.defer();
             var flag = null;
             console.log($rootScope.chartType);
@@ -21,6 +21,8 @@ app.factory('dateData', ['$http', '$q','$rootScope', function ($http, $q, $rootS
                 default :
                     console.log('dataType is error');
             }
+//			if($rootScope.)
+			var date = $rootScope.date;
             $http.post('dateData', {'date': date,'flag':flag}).success(function (data) {
                 deferred.resolve(data);
             }).error(function (err) {

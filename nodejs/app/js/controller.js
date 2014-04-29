@@ -22,7 +22,7 @@ var mainTableControl = ['$scope','dateData' , '$http',function mainTableControl(
         $scope.mydata = data;
     });
     $scope.$on( 'date.update', function( event ) {
-        console.log('up');
+        console.log('update');
         $scope.mydata = dateData.data;
     });
 
@@ -35,6 +35,12 @@ var mainTableControl = ['$scope','dateData' , '$http',function mainTableControl(
 //    }).error(function (err) {
 //        alert(err)
 //    });
+	var socket = io.connect('http://localhost:3002');
+	socket.on('open',function(){
+		console.log('start websocket');
+		socket.emit('timeBucket',{"startDate":20140420,"EndDate":20140424});
+	});
+
 
 }];
 
