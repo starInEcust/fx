@@ -34,7 +34,7 @@ exports.dateData = function (req, response) {
 			}
 		}
 		var json = JSON.stringify(a);
-//            console.log(json);
+            console.log(json);
 		response.send(json);
 	});
 };

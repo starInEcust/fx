@@ -46,14 +46,35 @@ io.on('connection',function(socket){
 //			console.log('timeBucket');
 //		}
 	});
-	socket.on('timeBucket',function(data){
-		console.log(data);
-//		getdata.timeBucket(data.startDate,data.EndDate);
-
+//	socket.on('timeBucket',function(data){
+//		console.log(data);
+////		getdata.timeBucket(data.startDate,data.EndDate);
+//
+//	});
+	var num = 1;
+	socket.on('oneDay',function(data){
+		console.log(num);
+		num++;
+		var date = data.startDate;
+		var regexFlag = data.flag;
+//		console.log(date);
+//		console.log(regexFlag);
+			fs.readFile('app/data/noah_push_statistic_' + date, {'encoding': 'utf-8'}, function (err, data) {
+//				var regex = '/^' + regexFlag + '/i';
+//				regex = eval(regex);
+////			console.log(typeof (regex));
+				var dataObj = eval("(" + data + ")");
+//				for (var key in a) {
+//					if (!regex.test(key)) {
+//						delete a[key];
+//					}
+//				}
+				socket.emit('oneDayData',dataObj);
+			});
 	});
 
 });
-app.post('/dateData',getdata.dateData);
+//app.post('/dateData',getdata.dateData);
 //fs.readFile('app/data/noah_push_statistic_20140424',{'encoding':'utf-8'},function(err,data){
 //    if(err){return console.log(err) ;}
 //    var dataObj= eval("(" + data + ")");

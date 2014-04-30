@@ -26,7 +26,7 @@ app.directive('selectTime', ['dateData', '$rootScope', function (dateData, $root
 					}
                     if(oldDate == getDate()){return}
                     oldDate = getDate();
-                    dateData.getData(getDate()).then(function (data) {
+                    dateData.getData().then(function (data) {
                         dateData.data = data;
                         $rootScope.$broadcast('date.update');
                     });
@@ -35,7 +35,11 @@ app.directive('selectTime', ['dateData', '$rootScope', function (dateData, $root
             function getDate() {
                 var date = elem.find('#datepicker input').val();
                 date = date.split('.').reverse().join('');
-                $rootScope.date = date;
+				if(attrs.selectTime == 'timeBucket'){
+					$rootScope.dateEnd = date;
+				}else{
+					$rootScope.dateStart = date;
+				}
                 return date;
             }
             var oldDate = getDate();
@@ -44,7 +48,7 @@ app.directive('selectTime', ['dateData', '$rootScope', function (dateData, $root
 }]);
 //选择是一个时间点还是一段时间指令，主要功能为
 //切换ICON，UI,改变navControl作用域下的dateType
-app.directive('dateType', ['dateData', '$rootScope', function (dateData, $rootScope) {
+app.directive('dateType', ['$rootScope', function ($rootScope) {
 	return{
 		restrict: "AE",
 		replace: true,
@@ -60,6 +64,7 @@ app.directive('dateType', ['dateData', '$rootScope', function (dateData, $rootSc
 					scope.dateType = 'timeBucket';
 					scope.action = 'cancel';
 				}else{
+					$rootScope.dateEnd = null;
 					scope.dateType = 'oneDay';
 					scope.action = 'plus';
 				}

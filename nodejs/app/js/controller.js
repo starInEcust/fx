@@ -35,11 +35,7 @@ var mainTableControl = ['$scope','dateData' , '$http',function mainTableControl(
 //    }).error(function (err) {
 //        alert(err)
 //    });
-	var socket = io.connect('http://localhost:3002');
-	socket.on('open',function(){
-		console.log('start websocket');
-		socket.emit('timeBucket',{"startDate":20140420,"EndDate":20140424});
-	});
+
 }];
 
 var navControl = ['$scope',function chartControl($scope){
