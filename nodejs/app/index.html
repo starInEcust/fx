@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="css/neeya-main.css"/>
 </head>
 <body class="metro" ng-controller="mainControl">
-<nav class="navigation-bar">
+<nav class="navigation-bar" ng-controller="navControl">
     <nav class="navigation-bar-content">
         <div class="element neeya-title">
             Neeya Charts
         </div>
-        <select-table></select-table>
+        <div select-time="start" class="element"></div>
+        <div class="divide-time element" ng-show="isOneDay">:</div>
+        <div select-time={{dateType}} ng-show="isOneDay" class="element"></div>
+        <date-type></date-type>
         <div class="element select-type">
             <a class="dropdown-toggle" href="#"><span>输入法ONLINE数据</span><i class=" icon-arrow-down-2 on-right"></i></a>
             <ul class="dropdown-menu" data-role="dropdown">

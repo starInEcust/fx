@@ -72,6 +72,15 @@ input {
 .metro .navigation-bar .element {
   cursor: pointer;
 }
+.metro .navigation-bar .divide-time {
+  font-size: 16px !important;
+  cursor: default !important;
+  font-weight: 800;
+  float: left;
+}
+.metro .navigation-bar .divide-time:hover {
+  background-color: #1ba1e2 !important;
+}
 .metro .navigation-bar #datepicker {
   float: right;
 }

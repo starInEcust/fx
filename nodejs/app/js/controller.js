@@ -40,12 +40,9 @@ var mainTableControl = ['$scope','dateData' , '$http',function mainTableControl(
 		console.log('start websocket');
 		socket.emit('timeBucket',{"startDate":20140420,"EndDate":20140424});
 	});
-
-
 }];
 
-
-
-var chartControl = ['$scope',function chartControl($scope){
-
+var navControl = ['$scope',function chartControl($scope){
+	$scope.isOneDay = false;
+	$scope.dateType = 'oneDay';
 }];
