@@ -33,16 +33,14 @@ app.factory('dateData', ['$http', '$q', '$rootScope', 'dataSelecter' ,function (
 					console.log('start websocket');
 				});
 				socket.emit('oneDay', {"startDate": $rootScope.dateStart, 'flag': flag});
-				var num = 1;
 				socket.on('oneDayData', function (data) {
-					console.log(num);
-					num++;
 //					console.log(flag);
 //					var needData = data;
 //					dataSelecter(needData,flag);
 //					console.log(dataSelecter(data,flag));
 					console.log(data);
 					deferred.resolve(data);
+					socket.removeAllListeners();
 				});
 				return deferred.promise;
 			} else {
