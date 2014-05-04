@@ -24,6 +24,7 @@ var mainTableControl = ['$scope','dateData' , '$http',function mainTableControl(
     $scope.$on( 'date.update', function( event ) {
         console.log('update');
         $scope.mydata = dateData.data;
+//		$scope.$apply();
     });
 
     $scope.toggleTable = function () {

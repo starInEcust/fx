@@ -63,13 +63,13 @@ io.on('connection',function(socket){
 //				var regex = '/^' + regexFlag + '/i';
 //				regex = eval(regex);
 ////			console.log(typeof (regex));
-				var dataObj = eval("(" + data + ")");
+//				var dataObj = eval("(" + data + ")");
 //				for (var key in a) {
 //					if (!regex.test(key)) {
 //						delete a[key];
 //					}
 //				}
-				socket.emit('oneDayData',dataObj);
+				socket.emit('oneDayData',data);
 			});
 	});
 

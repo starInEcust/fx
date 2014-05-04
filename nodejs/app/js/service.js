@@ -32,25 +32,37 @@ app.factory('dateData', ['$http', '$q', '$rootScope', 'dataSelecter' ,function (
 //				return deferred.promise;
 				var localData = window.localStorage.getItem($rootScope.dateStart);
 				if(localData && localData != 'null'){
-					console.log("local:"+localData);
-					console.log(typeof (window.localStorage.getItem($rootScope.dateStart)));
-					self.data = window.localStorage.getItem($rootScope.dateStart);
+//					console.log("local:"+localData);
+//					console.log(typeof (localData));
+//					self.data = JSON.parse(localData);
+					var needData = JSON.parse(localData);
+					needData = $.extend({},needData);
+					dataSelecter(needData,flag);
+					self.data = needData;
+
+//					self.data = eval("(" + localData + ")");
 					console.log(self.data);
+					console.log(typeof (self.data));
+					socket.removeAllListeners();
 					return 'local';
 				}
 				socket.emit('oneDay', {"startDate": $rootScope.dateStart, 'flag': flag});
 				socket.on('oneDayData', function (data) {
-					console.log("remote:"+data);
+//					console.log("remote:"+data);
+//					console.log(typeof (data));
 					if(!data){
 						socket.removeAllListeners();
  						return;
 					}
 					window.localStorage.setItem($rootScope.dateStart,data);
-					var needData = $.extend({},data);
+					var needData = JSON.parse(data);
+					console.log(needData);
+					console.log(typeof (needData));
+					needData = $.extend({},needData);
 					dataSelecter(needData,flag);
 					deferred.resolve(needData);
+					socket.removeAllListeners();
 				});
-				socket.removeAllListeners();
 				return deferred.promise;
 			} else {
 
