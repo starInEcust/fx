@@ -28,9 +28,10 @@ app.directive('selectTime', ['dateData', '$rootScope', function (dateData, $root
                     oldDate = getDate();
 					//这个地方要缓存一下，不然会运行两次
 					var getData = dateData.getData();
+					//这里有个非常奇怪的$apply问题，
 					if(getData == 'local'){
 						console.log('local');
-						$rootScope.$broadcast('date.update');
+						$rootScope.$broadcast('local.update');
 					}else{
 						console.log('nolocal');
 						getData.then(function (data) {
@@ -136,10 +137,16 @@ app.directive('typeSelect',['$rootScope','dateData',function($rootScope,dateData
             elem.on('click',function(){
                 $rootScope.chartType = flag;
                 elem.parent().siblings().find('span').text(flag);
-                dateData.getData().then(function (data) {
-                    dateData.data = data;
-                    $rootScope.$broadcast('date.update');
-                });
+				var getData = dateData.getData();
+				//这里有个非常奇怪的$apply问题，
+				if(getData == 'local'){
+					$rootScope.$broadcast('local.update');
+				}else{
+					getData.then(function (data) {
+						dateData.data = data;
+						$rootScope.$broadcast('date.update');
+					});
+				}
             });
         }
     };

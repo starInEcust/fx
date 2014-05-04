@@ -26,6 +26,11 @@ var mainTableControl = ['$scope','dateData' , '$http',function mainTableControl(
         $scope.mydata = dateData.data;
 //		$scope.$apply();
     });
+	$scope.$on( 'local.update', function( event ) {
+		console.log('local-update');
+		$scope.mydata = dateData.data;
+		$scope.$apply();
+	});
 
     $scope.toggleTable = function () {
         $scope.showTD = !$scope.showTD;
