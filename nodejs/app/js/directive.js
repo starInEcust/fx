@@ -26,10 +26,16 @@ app.directive('selectTime', ['dateData', '$rootScope', function (dateData, $root
 					}
                     if(oldDate == getDate()){return}
                     oldDate = getDate();
-                    dateData.getData().then(function (data) {
-                        dateData.data = data;
-                        $rootScope.$broadcast('date.update');
-                    });
+					if(dateData.getData() == 'local'){
+						console.log('local');
+						$rootScope.$broadcast('date.update');
+					}else{
+						console.log('nolocal');
+						dateData.getData().then(function (data) {
+							dateData.data = data;
+							$rootScope.$broadcast('date.update');
+						});
+					}
                 }
             });
             function getDate() {

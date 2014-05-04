@@ -18,9 +18,9 @@ var mainControl = ['$scope', '$rootScope',function navControl($scope,$rootScope)
 var mainTableControl = ['$scope','dateData' , '$http',function mainTableControl($scope, dateData,$http) {
     var objdate = new Date();
     var date = objdate.getFullYear()+'0'+(objdate.getMonth()+1)+(objdate.getDate()-1);
-    dateData.getData(date).then(function(data){
-        $scope.mydata = data;
-    });
+//    dateData.getData(date).then(function(data){
+//        $scope.mydata = data;
+//    });
     $scope.$on( 'date.update', function( event ) {
         console.log('update');
         $scope.mydata = dateData.data;

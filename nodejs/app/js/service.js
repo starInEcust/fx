@@ -8,6 +8,7 @@ app.factory('dateData', ['$http', '$q', '$rootScope', 'dataSelecter' ,function (
 			var socket = io.connect('http://localhost:3002');
 			var deferred = $q.defer();
 			var flag = null;
+			var self = this;
 			console.log($rootScope.chartType);
 			switch ($rootScope.chartType) {
 				case '输入法OEM版数据':
@@ -29,19 +30,27 @@ app.factory('dateData', ['$http', '$q', '$rootScope', 'dataSelecter' ,function (
 //					console.log(err);
 //				});
 //				return deferred.promise;
-				socket.on('open', function () {
-					console.log('start websocket');
-				});
+				var localData = window.localStorage.getItem($rootScope.dateStart);
+				if(localData && localData != 'null'){
+					console.log("local:"+localData);
+					console.log(typeof (window.localStorage.getItem($rootScope.dateStart)));
+					self.data = window.localStorage.getItem($rootScope.dateStart);
+					console.log(self.data);
+					return 'local';
+				}
 				socket.emit('oneDay', {"startDate": $rootScope.dateStart, 'flag': flag});
 				socket.on('oneDayData', function (data) {
-//					console.log(flag);
-//					var needData = data;
-//					dataSelecter(needData,flag);
-//					console.log(dataSelecter(data,flag));
-					console.log(data);
-					deferred.resolve(data);
-					socket.removeAllListeners();
+					console.log("remote:"+data);
+					if(!data){
+						socket.removeAllListeners();
+ 						return;
+					}
+					window.localStorage.setItem($rootScope.dateStart,data);
+					var needData = $.extend({},data);
+					dataSelecter(needData,flag);
+					deferred.resolve(needData);
 				});
+				socket.removeAllListeners();
 				return deferred.promise;
 			} else {
 
