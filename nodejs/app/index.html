@@ -13,8 +13,8 @@
             Neeya Charts
         </div>
         <div select-time="start" class="element"></div>
-        <div class="divide-time element" ng-show="isOneDay">:</div>
-        <div select-time="dateType" ng-show="isOneDay" class="element"></div>
+        <div class="divide-time element" ng-hide="isOneDay">:</div>
+        <div select-time={{dateType}} ng-hide="isOneDay" class="element"></div>
         <date-type></date-type>
         <div class="element select-type">
             <a class="dropdown-toggle" href="#"><span>输入法ONLINE数据</span><i class=" icon-arrow-down-2 on-right"></i></a>

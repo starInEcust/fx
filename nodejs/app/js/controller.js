@@ -45,6 +45,6 @@ var mainTableControl = ['$scope','dateData' , '$http',function mainTableControl(
 }];
 
 var navControl = ['$scope',function chartControl($scope){
-	$scope.isOneDay = false;
+	$scope.isOneDay = true;
 	$scope.dateType = 'oneDay';
 }];

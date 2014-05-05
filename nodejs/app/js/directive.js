@@ -3,7 +3,6 @@
  */
 //时间选择器指令，属性为start，设置全局变量dateOne，
 //属性为dateBucket，设置全局变量dateTwo,两者都会调用dateData服务，获取data后通知刷新
-// 为oneDay是个容错性选项，此时UI应该是不会显示的。
 app.directive('selectTime', ['dateData', '$rootScope', function (dateData, $rootScope) {
     return{
         restrict: "AE",
@@ -14,6 +13,7 @@ app.directive('selectTime', ['dateData', '$rootScope', function (dateData, $root
             '<button class="btn-date"></button>' +
             '</div>',
         link: function (scope, elem, attrs) {
+			//进行初始化
             var objdate = new Date();
 			elem.children('#datepicker').datepicker({
                 date: objdate.getFullYear() + '-' + '0' + (objdate.getMonth() + 1) + '-' + (objdate.getDate()-1), // set init date
@@ -21,9 +21,6 @@ app.directive('selectTime', ['dateData', '$rootScope', function (dateData, $root
                 position: "bottom",
                 locale: 'en',
                 selected: function () {
-					if(attrs.selectTime == 'oneDay'){
-						return;
-					}
                     if(oldDate == getDate()){return}
                     oldDate = getDate();
 					//这个地方要缓存一下，不然会运行两次
@@ -33,7 +30,7 @@ app.directive('selectTime', ['dateData', '$rootScope', function (dateData, $root
 						console.log('local');
 						$rootScope.$broadcast('local.update');
 					}else{
-						console.log('nolocal');
+						console.log('server');
 						getData.then(function (data) {
 							dateData.data = data;
 							$rootScope.$broadcast('date.update');
@@ -41,13 +38,19 @@ app.directive('selectTime', ['dateData', '$rootScope', function (dateData, $root
 					}
                 }
             });
+			//如果只有一天就返回
+			if(attrs.selectTime == 'oneDay'){
+				return;
+			}
             function getDate() {
                 var date = elem.find('#datepicker input').val();
                 date = date.split('.').reverse().join('');
 				if(attrs.selectTime == 'timeBucket'){
 					$rootScope.dateEnd = date;
+					console.log(attrs.selectTime+'end'+$rootScope.dateEnd);
 				}else{
 					$rootScope.dateStart = date;
+					console.log(attrs.selectTime+'start'+$rootScope.dateStart);
 				}
                 return date;
             }
@@ -68,6 +71,7 @@ app.directive('dateType', ['$rootScope', function ($rootScope) {
 		link: function (scope, elem, attrs) {
 			scope.action = 'plus';
 			elem.on('click', function(){
+				//控制第二个时间pick显示
 				scope.isOneDay = !scope.isOneDay;
 				if(scope.action == 'plus'){
 					scope.dateType = 'timeBucket';

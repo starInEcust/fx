@@ -55,7 +55,7 @@ io.on('connection',function(socket){
 	socket.on('oneDay',function(data){
 		console.log(num);
 		num++;
-		var date = data.startDate;
+		var date = data.Date;
 		var regexFlag = data.flag;
 //		console.log(date);
 //		console.log(regexFlag);
