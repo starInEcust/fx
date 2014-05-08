@@ -33,22 +33,49 @@ app.factory('dateData', ['$http', '$q', '$rootScope', 'dataSelecter' , 'makeOneD
 					console.log(self.data);
 						$rootScope.$broadcast('update');
 					}
+					makeOneDayLocal.removeSocketListen();
 					listengetOneday();
 				});
 				//先写监听器，再有广播，不然对于本地数据瞬间执行，然后发起广播，此时事件监听器还没有添加上。就会出现，直接点击本地数据没有监听器的问题，造成bug
-				makeOneDayLocal($rootScope.dateStart);
+				makeOneDayLocal.getOneDay($rootScope.dateStart);
 			} else {
-				var startMon = $rootScope.dateStart.slice(4, 6);
-				var endMon = $rootScope.dateEnd.slice(4, 6);
-				console.log(startMon + ',' + endMon);
-				var dateStart = $rootScope.dateStart;
-				var dateEnd = $rootScope.dateEnd;
-				for (var i = 0; i < (dateStart - dateEnd); i++) {
-					var local = window.localStorage.getItem(dateStart + i);
-					if (local && local != 'null') {
-
-					}
+				var startYear = $rootScope.dateStart.slice(0,4);
+				var startMon =  Number($rootScope.dateStart.slice(4, 6));
+				var endMon =  Number($rootScope.dateEnd.slice(4, 6));
+				var dateStart = Number($rootScope.dateStart);
+				var dateEnd = Number($rootScope.dateEnd);
+				var dayStart = Number($rootScope.dateStart.slice(-2));
+				var dayEnd = Number($rootScope.dateEnd.slice(-2));
+//				console.log(dateStart+':'+dayStart + ',' + dateEnd+':'+dayEnd);
+				var dayPoor = null;
+				if((endMon - startMon) == 0){
+					dayPoor = dayEnd - dayStart;
+				}else {
+					dayPoor = (31-dayStart)+31*(endMon - startMon-1)+dayEnd;
 				}
+				var toDay = dayStart;
+				var toDate = dateStart;
+				var mon = startMon;
+				for (var i = 0; i <= dayPoor; i++) {
+					if(toDay > 31){
+						toDay = 1;
+						++mon;
+						mon = mon < 10 ? '0' + mon : mon;
+						dateStart = Number(startYear + mon +'01');
+					}
+					makeOneDayLocal(toDate.toString());
+					toDay++;
+					toDate++;
+				}
+				var getDataNum = 1;
+				var listen = $rootScope.$on('getOneDay',function(){
+					getDataNum++;
+
+//					if(getDataNum == ){
+//
+//					}
+				});
+
 			}
 		}
 	};
@@ -67,24 +94,29 @@ app.factory('dataSelecter', function () {
 	}
 });
 app.factory('makeOneDayLocal',['$rootScope', 'socket', function ($rootScope, socket) {
-	return function (date) {
-		var localData = window.localStorage.getItem(date);
-		if (localData && localData != 'null') {
-			console.log('local');
-			$rootScope.$broadcast('getOneDay');
-		}else{
-			socket.emit('oneDay', {"Date": date});
-			socket.on('oneDayData', function (data) {
-				if (!data) {
-					socket.removeAllListeners();
-					$rootScope.$broadcast('getOneDay');
-					return false;
-				}
-				window.localStorage.setItem(date, data);
-				socket.removeAllListeners();
-				console.log('remote');
+	return {
+		getOneDay:function (date) {
+			console.log(date);
+			var localData = window.localStorage.getItem(date);
+			if (localData && localData != 'null') {
+				console.log('local');
 				$rootScope.$broadcast('getOneDay');
-			});
+			}else{
+				socket.emit('oneDay', {"Date": date});
+				socket.on('oneDayData', function (data) {
+					if (!data) {
+						console.log('noData');
+						$rootScope.$broadcast('getOneDay');
+						return false;
+					}
+					window.localStorage.setItem(date, data);
+					console.log('remote');
+					$rootScope.$broadcast('getOneDay');
+				});
+			}
+		},
+		removeSocketListen:function(){
+			socket.removeAllListeners();
 		}
 	}
 }]);

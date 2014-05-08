@@ -74,6 +74,7 @@ app.directive('dateType', ['$rootScope', function ($rootScope) {
 				//控制第二个时间pick显示
 				scope.isOneDay = !scope.isOneDay;
 				if(scope.action == 'plus'){
+					$rootScope.dateEnd = $rootScope.dateStart;
 					scope.dateType = 'timeBucket';
 					scope.action = 'cancel';
 				}else{
