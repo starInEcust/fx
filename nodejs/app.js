@@ -56,7 +56,7 @@ io.on('connection',function(socket){
 		console.log(num);
 		num++;
 		var date = data.Date;
-		var regexFlag = data.flag;
+//		var regexFlag = data.flag;
 //		console.log(date);
 //		console.log(regexFlag);
 			fs.readFile('app/data/noah_push_statistic_' + date, {'encoding': 'utf-8'}, function (err, data) {
@@ -71,6 +71,9 @@ io.on('connection',function(socket){
 //				}
 				socket.emit('oneDayData',data);
 			});
+	});
+	socket.on('disconnect', function() {
+		console.log('disconnect');
 	});
 
 });

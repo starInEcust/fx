@@ -21,13 +21,9 @@ var mainTableControl = ['$scope','dateData' , '$http',function mainTableControl(
 //    dateData.getData(date).then(function(data){
 //        $scope.mydata = data;
 //    });
-    $scope.$on( 'date.update', function( event ) {
-        console.log('update');
-        $scope.mydata = dateData.data;
-//		$scope.$apply();
-    });
-	$scope.$on( 'local.update', function( event ) {
-		console.log('local-update');
+
+	$scope.$on( 'update', function( event ) {
+		console.log('update');
 		$scope.mydata = dateData.data;
 		$scope.$apply();
 	});

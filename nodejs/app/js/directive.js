@@ -21,21 +21,21 @@ app.directive('selectTime', ['dateData', '$rootScope', function (dateData, $root
                 position: "bottom",
                 locale: 'en',
                 selected: function () {
-                    if(oldDate == getDate()){return}
-                    oldDate = getDate();
-					//这个地方要缓存一下，不然会运行两次
-					var getData = dateData.getData();
+					var Date = getDate();
+                    if(oldDate == Date){return}
+                    oldDate = Date;
+					dateData.getData();
 					//这里有个非常奇怪的$apply问题，
-					if(getData == 'local'){
-						console.log('local');
-						$rootScope.$broadcast('local.update');
-					}else{
-						console.log('server');
-						getData.then(function (data) {
-							dateData.data = data;
-							$rootScope.$broadcast('date.update');
-						});
-					}
+//					if(getData == 'local'){
+//						console.log('local');
+//						$rootScope.$broadcast('local.update');
+//					}else{
+//						console.log('server');
+//						getData.then(function (data) {
+//							dateData.data = data;
+//							$rootScope.$broadcast('date.update');
+//						});
+//					}
                 }
             });
 			//如果只有一天就返回
@@ -141,16 +141,7 @@ app.directive('typeSelect',['$rootScope','dateData',function($rootScope,dateData
             elem.on('click',function(){
                 $rootScope.chartType = flag;
                 elem.parent().siblings().find('span').text(flag);
-				var getData = dateData.getData();
-				//这里有个非常奇怪的$apply问题，
-				if(getData == 'local'){
-					$rootScope.$broadcast('local.update');
-				}else{
-					getData.then(function (data) {
-						dateData.data = data;
-						$rootScope.$broadcast('date.update');
-					});
-				}
+				dateData.getData();
             });
         }
     };
