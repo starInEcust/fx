@@ -135,6 +135,17 @@ input {
 .neeya-show-charts .td-hide {
   display: none;
 }
+.neeya-show-charts .show-toolbar {
+  padding-bottom: 10px;
+}
+.neeya-show-charts .show-toolbar li {
+  cursor: pointer;
+  float: left;
+  margin-left: 10px;
+  padding: 10px;
+  color: #ffffff;
+  background-color: #00ccff;
+}
 .neeya-show-charts #neeya-table thead {
   position: relative;
 }

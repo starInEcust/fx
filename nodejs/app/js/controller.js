@@ -26,23 +26,14 @@ var mainTableControl = ['$scope','dateData' , '$http',function mainTableControl(
 	}
     var date = objdate.getFullYear()+'0'+(objdate.getMonth()+1)+day;
 	console.log(date);
-    dateData.getData(date).then(function(data){
-        $scope.mydata = data;
-    });
-    $scope.$on( 'date.update', function( event ) {
-        console.log('up');
-        $scope.mydata = dateData.data;
-    });
-
-    $scope.toggleTable = function () {
-        $scope.showTD = !$scope.showTD;
-
-    };
-//    $http.post('timeBucket', {'dateStart': '20140410','dateEnd':'20140412'}).success(function (data) {
-//        console.log(data);
-//    }).error(function (err) {
-//        alert(err)
-//    });
+	    dateData.getData(date).then(function(data){
+	        $scope.mydata = data;
+	    });
+	    $scope.$on( 'date.update', function( event ) {
+	        console.log('up');
+	        $scope.mydata = dateData.data;
+	    });
+	$scope.spanNum = 1;
 
 }];
 

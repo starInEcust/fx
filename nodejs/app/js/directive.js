@@ -109,3 +109,44 @@ app.directive('typeSelect',['$rootScope','dateData',function($rootScope,dateData
         }
     };
 }]);
+app.directive('tdSwitch', function () {
+	return {
+		restrict: 'AE',
+			link: function (scope, elem, attrs) {
+				elem.on('click', function () {
+					scope.$apply(function(){
+						scope[attrs.tdSwitch]  = !scope[attrs.tdSwitch] ;
+					});
+			});
+		}
+	};
+});
+app.directive('toggleAlluser', function () {
+	return {
+		restrict: 'AE',
+		link: function (scope, elem, attrs) {
+			elem.on('click', function () {
+				scope.$apply(function(){
+//					console.log(attrs.colspan);
+					if(attrs.toggleAlluser == 'All'){
+						console.log(attrs.toggleAlluser);
+						scope.all = false;
+						scope.user = true;
+						scope.spanNum = 2;
+					}else if(attrs.toggleAlluser == 'USER'){
+						console.log(attrs.toggleAlluser);
+						scope.all = true;
+						scope.user = false;
+						scope.spanNum = 2;
+					}else{
+						console.log(attrs.toggleAlluser);
+						scope.all = false;
+						scope.user = false;
+						scope.spanNum = 1;
+					}
+//					scope[attrs.alluser]  = !scope[attrs.alluser] ;
+				});
+			});
+		}
+	};
+});
