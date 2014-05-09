@@ -12,9 +12,9 @@
         <li td-switch="Click">Click</li>
         <li td-switch="Show">Show</li>
         <li td-switch="ClickShow">Click/Show</li>
-        <li toggle-alluser="All">All</li>
-        <li toggle-alluser="USER">USER</li>
-        <li toggle-alluser="AllUSER">All/USER</li>
+        <li td-switch toggle-alluser="All">All</li>
+        <li td-switch toggle-alluser="USER">USER</li>
+        <li td-switch toggle-alluser="AllUSER">All/USER</li>
     </ul>
 </div>
 <table id="neeya-table" class="table bordered hovered">
@@ -22,22 +22,24 @@
         <tr>
             <th ng-hide="num" rowspan="2">Num</th>
             <th ng-hide="PushID" rowspan="2">Push ID</th>
-            <th ng-hide="Toastclick" rowspan="1" colspan="2">Toastclick</th>
-            <th ng-hide="Toastclose" rowspan="1" colspan="2">Toastclose</th>
+            <th ng-hide="Show" rowspan="1" colspan="2">Show</th>
+            <th ng-hide="Click" rowspan="1" colspan="2">Click</th>
+            <th ng-hide="ClickShow" rowspan="1" colspan="2">Click/Show</th>
             <th ng-hide="DSTART" rowspan="1" colspan="2">D/START</th>
             <th ng-hide="DFINISH" rowspan="1" colspan="2">D/FINISH</th>
             <th ng-hide="ISTART" rowspan="1" colspan="2">I/START</th>
             <th ng-hide="IFINISH" rowspan="1" colspan="2">I/FINISH</th>
+            <th ng-hide="Toastclick" rowspan="1" colspan="2">Toastclick</th>
+            <th ng-hide="Toastclose" rowspan="1" colspan="2">Toastclose</th>
             <th ng-hide="None" rowspan="1" colspan="2">None</th>
-            <th ng-hide="Click" rowspan="1" colspan="2">Click</th>
-            <th ng-hide="Show" rowspan="1" colspan="2">Show</th>
-            <th ng-hide="ClickShow" rowspan="1" colspan="2">Click/Show</th>
         </tr>
         <tr>
-            <th colspan={{spanNum}} ng-hide="(Toastclick || all)">ALL</th>
-            <th colspan={{spanNum}}  ng-hide="(Toastclick || user)">User</th>
-            <th colspan={{spanNum}} ng-hide="(Toastclose || all)">ALL</th>
-            <th colspan={{spanNum}} ng-hide="(Toastclose || user)">User</th>
+            <th colspan={{spanNum}} ng-hide="(Show || all)">ALL</th>
+            <th colspan={{spanNum}} ng-hide="(Show || user)">User</th>
+            <th colspan={{spanNum}} ng-hide="(Click || all)">ALL</th>
+            <th colspan={{spanNum}} ng-hide="(Click || user)">User</th>
+            <th colspan={{spanNum}} ng-hide="(ClickShow || all)">ALL</th>
+            <th colspan={{spanNum}} ng-hide="(ClickShow || user)">User</th>
             <th colspan={{spanNum}} ng-hide="(DSTART || all)">ALL</th>
             <th colspan={{spanNum}} ng-hide="(DSTART || user)">User</th>
             <th colspan={{spanNum}} ng-hide="(DFINISH || all)">ALL</th>
@@ -46,24 +48,24 @@
             <th colspan={{spanNum}} ng-hide="(ISTART || user)">User</th>
             <th colspan={{spanNum}} ng-hide="(IFINISH || all)">ALL</th>
             <th colspan={{spanNum}} ng-hide="(IFINISH || user)">User</th>
+            <th colspan={{spanNum}} ng-hide="(Toastclick || all)">ALL</th>
+            <th colspan={{spanNum}}  ng-hide="(Toastclick || user)">User</th>
+            <th colspan={{spanNum}} ng-hide="(Toastclose || all)">ALL</th>
+            <th colspan={{spanNum}} ng-hide="(Toastclose || user)">User</th>
             <th colspan={{spanNum}} ng-hide="(None || all)">ALL</th>
             <th colspan={{spanNum}} ng-hide="(None || user)">User</th>
-            <th colspan={{spanNum}} ng-hide="(Click || all)">ALL</th>
-            <th colspan={{spanNum}} ng-hide="(Click || user)">User</th>
-            <th colspan={{spanNum}} ng-hide="(Show || all)">ALL</th>
-            <th colspan={{spanNum}} ng-hide="(Show || user)">User</th>
-            <th colspan={{spanNum}} ng-hide="(ClickShow || all)">ALL</th>
-            <th colspan={{spanNum}} ng-hide="(ClickShow || user)">User</th>
         </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="(name,val) in mydata">
+    <tr tr-select ng-class="{isInfo:'info'}" ng-repeat="(name,val) in mydata">
         <td ng-hide="num" ng-bind="$index"></td>
         <td ng-hide="PushID" ng-bind="name"></td>
-        <td colspan={{spanNum}} ng-hide="(Toastclick || all)" ng-bind="val.DISMISS.TOASTCLICKED.all"></td>
-        <td colspan={{spanNum}} ng-hide="(Toastclick || user)" ng-bind="val.DISMISS.TOASTCLICKED.user"></td>
-        <td colspan={{spanNum}} ng-hide="(Toastclose || all)" ng-bind="val.DISMISS.TOASTCLOSED.all"></td>
-        <td colspan={{spanNum}} ng-hide="(Toastclose || user)" ng-bind="val.DISMISS.TOASTCLOSED.user"></td>
+        <td colspan={{spanNum}} ng-hide="(Show || all)" ng-bind="val.SHOW.NONE.all"></td>
+        <td colspan={{spanNum}} ng-hide="(Show || user)" ng-bind="val.SHOW.NONE.user"></td>
+        <td colspan={{spanNum}} ng-hide="(Click || all)" ng-bind="val.CLICK.NONE.all"></td>
+        <td colspan={{spanNum}} ng-hide="(Click || user)" ng-bind="val.CLICK.NONE.user"></td>
+        <td colspan={{spanNum}} ng-hide="(ClickShow || all)" ng-bind="val.CLICK.NONE.all/val.SHOW.NONE.all  | percent ">%</td>
+        <td colspan={{spanNum}} ng-hide="(ClickShow || user)" ng-bind="val.CLICK.NONE.user/val.SHOW.NONE.user  | percent">%</td>
         <td colspan={{spanNum}} ng-hide="(DSTART || all)" ng-bind="val.DOWNLOAD.START.all"></td>
         <td colspan={{spanNum}} ng-hide="(DSTART || user)" ng-bind="val.DOWNLOAD.START.user"></td>
         <td colspan={{spanNum}} ng-hide="(DFINISH || all)" ng-bind="val.DOWNLOAD.FINISH.all"></td>
@@ -72,14 +74,12 @@
         <td colspan={{spanNum}} ng-hide="(ISTART || user)" ng-bind="val.INSTALL.START.user"></td>
         <td colspan={{spanNum}} ng-hide="(IFINISH || all)" ng-bind="val.INSTALL.FINISH.all"></td>
         <td colspan={{spanNum}} ng-hide="(IFINISH || user)" ng-bind="val.INSTALL.FINISH.user"></td>
+        <td colspan={{spanNum}} ng-hide="(Toastclick || all)" ng-bind="val.DISMISS.TOASTCLICKED.all"></td>
+        <td colspan={{spanNum}} ng-hide="(Toastclick || user)" ng-bind="val.DISMISS.TOASTCLICKED.user"></td>
+        <td colspan={{spanNum}} ng-hide="(Toastclose || all)" ng-bind="val.DISMISS.TOASTCLOSED.all"></td>
+        <td colspan={{spanNum}} ng-hide="(Toastclose || user)" ng-bind="val.DISMISS.TOASTCLOSED.user"></td>
         <td colspan={{spanNum}} ng-hide="(None || all)" ng-bind="val.DISMISS.NONE.all"></td>
         <td colspan={{spanNum}} ng-hide="(None || user)" ng-bind="val.DISMISS.NONE.user"></td>
-        <td colspan={{spanNum}} ng-hide="(Click || all)" ng-bind="val.CLICK.NONE.all"></td>
-        <td colspan={{spanNum}} ng-hide="(Click || user)" ng-bind="val.CLICK.NONE.user"></td>
-        <td colspan={{spanNum}} ng-hide="(Show || all)" ng-bind="val.SHOW.NONE.all"></td>
-        <td colspan={{spanNum}} ng-hide="(Show || user)" ng-bind="val.SHOW.NONE.user"></td>
-        <td colspan={{spanNum}} ng-hide="(ClickShow || all)" ng-bind="val.CLICK.NONE.all/val.SHOW.NONE.all  | percent ">%</td>
-        <td colspan={{spanNum}} ng-hide="(ClickShow || user)" ng-bind="val.CLICK.NONE.user/val.SHOW.NONE.user  | percent">%</td>
     </tr>
     </tbody>
 </table>

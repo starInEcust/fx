@@ -65,6 +65,49 @@ input {
 .leftShow {
   left: 0;
 }
+@-webkit-keyframes buttonLight {
+  from {
+    background: rgba(0, 204, 255, 0.5);
+    -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3) inset, 0 0 3px rgba(220, 120, 200, 0.5);
+    color: green;
+  }
+  25% {
+    background: rgba(0, 252, 255, 0.8);
+    -webkit-box-shadow: 0 0 10px rgba(255, 155, 255, 0.5) inset, 0 0 8px rgba(120, 120, 200, 0.8);
+    color: blue;
+  }
+  50% {
+    background: #00ff6c;
+    -webkit-box-shadow: 0 0 5px rgba(155, 255, 255, 0.3) inset, 0 0 3px #dc7864;
+    color: orange;
+  }
+  75% {
+    background: rgba(0, 252, 255, 0.8);
+    -webkit-box-shadow: 0 0 10px rgba(255, 155, 255, 0.5) inset, 0 0 8px rgba(120, 120, 200, 0.8);
+    color: black;
+  }
+  to {
+    background: rgba(0, 204, 255, 0.5);
+    -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3) inset, 0 0 3px rgba(220, 120, 200, 0.5);
+    color: green;
+  }
+}
+.buttonLight {
+  /*按钮的基本属性*/
+  background: #00ccff;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
+  /*调用animation属性，从而让按钮在载入页面时就具有动画效果*/
+  -webkit-animation-name: "buttonLight";
+  /*动画名称，需要跟@keyframes定义的名称一致*/
+  -webkit-animation-duration: 5s;
+  /*动画持续的时间长*/
+  -webkit-animation-iteration-count: infinite;
+  /*动画循环播放的次数*/
+}
 .metro .navigation-bar {
   z-index: 20;
   position: fixed;
@@ -135,16 +178,26 @@ input {
 .neeya-show-charts .td-hide {
   display: none;
 }
-.neeya-show-charts .show-toolbar {
-  padding-bottom: 10px;
-}
 .neeya-show-charts .show-toolbar li {
+  font-size: 16px;
+  margin-bottom: 10px;
   cursor: pointer;
   float: left;
   margin-left: 10px;
   padding: 10px;
   color: #ffffff;
   background-color: #00ccff;
+  -webkit-transition: all 1s ease 0;
+  -moz-transition: all 1s ease 0;
+  -ms-transition: all 1s ease 0;
+  -o-transition: all 1s ease 0;
+  transition: all 1s ease 0;
+}
+.neeya-show-charts .show-toolbar li:hover {
+  background-color: #00ff6c;
+}
+.neeya-show-charts .show-toolbar li.buttonLight {
+  float: right;
 }
 .neeya-show-charts #neeya-table thead {
   position: relative;

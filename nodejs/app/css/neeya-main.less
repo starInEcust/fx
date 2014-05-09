@@ -2,6 +2,7 @@
 @import "functionLib";
 @import "var";
 @import "ngClass";
+@import "animate";
 .metro{
   .navigation-bar{
     .element{
@@ -70,16 +71,23 @@
   padding: 10px;
   float: right;
 	.show-toolbar{
-
 		li{
+			font-size: 16px;
+			margin-bottom: 10px;
 			cursor: pointer;
 			float: left;
 			margin-left: 10px;
 			padding: 10px;
 			color: #ffffff;
 			background-color: #00ccff;
+			.transition();
+			&:hover{
+				background-color: #00ff6c;
+			}
+			&.buttonLight{
+				float: right;
+			}
 		}
-		padding-bottom: 10px;
 	}
   #neeya-table{
     thead{

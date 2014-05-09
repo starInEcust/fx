@@ -71,3 +71,10 @@
 .onePxBorder(@color:@bordercolor){
   border: 1px solid @color;
 }
+.loopLiColor(@index,@colordiff) when (@index>0){
+	li:nth-child(@{index}){
+		background-color: #ffffff - @colordiff*(@index);
+	}
+	.loopLiColor(@index - 1,@colordiff);
+}
+.loopLiColor(0){}
