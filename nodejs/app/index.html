@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="css/neeya-main.css"/>
 </head>
 <body class="metro" ng-controller="mainControl">
-<nav class="navigation-bar">
+<nav class="navigation-bar" ng-controller="navControl">
     <nav class="navigation-bar-content">
         <div class="element neeya-title">
             Neeya Charts
         </div>
-        <select-table></select-table>
+        <div select-time="start" class="element"></div>
+        <div class="divide-time element" ng-hide="isOneDay">:</div>
+        <div select-time={{dateType}} ng-hide="isOneDay" class="element"></div>
+        <date-type></date-type>
         <div class="element select-type">
             <a class="dropdown-toggle" href="#"><span>输入法ONLINE数据</span><i class=" icon-arrow-down-2 on-right"></i></a>
             <ul class="dropdown-menu" data-role="dropdown">
@@ -21,6 +24,7 @@
                 <li type-select>号码助手数据</li>
             </ul>
         </div>
+
 
 
 
@@ -38,7 +42,7 @@
             <li active-li class="disabled"><a href="#">未完成</a></li>
             <!--<li active-li class="title">图表</li>-->
             <!--<li active-li><a href="#/chart1">折线统计图</a></li>-->
-
+            <li active-li><a href="#/refresh">更新日志</a></li>
 
         </ul>
     </nav>
@@ -48,6 +52,7 @@
 
 </div>
 <script src="js/jquery-2.0.0.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
 <script src="js/jquery.widget.min.js"></script>
 <script src="js/metro.min.js"></script>
 <script src="js/highcharts.js"></script>

@@ -3,22 +3,32 @@
 @import "var";
 @import "ngClass";
 //@import "animate";
-.metro{
-  .navigation-bar{
-    .element{
-      cursor: pointer;
-    }
-    z-index: 20;
-    position: fixed;
-    #datepicker{
-      float: right;
-    }
-    .export-table{
-      color: #fff;
-    }
-    .select-type{
-      width: 175px;
-      text-align: center;
+.metro {
+	.navigation-bar {
+		z-index: 20;
+		position: fixed;
+		.element {
+			cursor: pointer;
+		}
+		.divide-time {
+			font-size: 16px !important;
+			cursor:  default !important;
+			font-weight: 800;
+			float: left;
+			&:hover{
+				background-color: #1ba1e2 !important;
+			}
+		}
+
+		#datepicker {
+			float: right;
+		}
+		.export-table {
+			color: #fff;
+		}
+		.select-type {
+			width: 175px;
+			text-align: center;
 			&.element{
 				padding: 0;
 			}
@@ -31,54 +41,54 @@
 				}
 			}
 
-      i{
-        font-size: 12px !IMPORTANT;
-      }
-      ul{
-        min-width: 175px;
-      }
-      li{
-        cursor: pointer;
-        text-align: center;
-        padding: 0;
-        margin: 0;
-        border-bottom: 1px solid #DCDDDE;
-        &:last-child{
-          border-bottom: none;
-        }
-      }
-    }
+			i {
+				font-size: 12px !IMPORTANT;
+			}
+			ul {
+				min-width: 175px;
+			}
+			li {
+				cursor: pointer;
+				text-align: center;
+				padding: 0;
+				margin: 0;
+				border-bottom: 1px solid #DCDDDE;
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+		}
 
-  }
-  .neeya-title{
-    color: #ffffff;
-    width: 10%;
-  }
+	}
+	.neeya-title {
+		color: #ffffff;
+		width: 10%;
+	}
 
-  .neeya-slide{
-    z-index: 7;
-    margin-top: 45px;
-    position: fixed;
-    width: 10%;
-    min-width: 135px;
-//    float: left;
-    box-shadow: 2px 0 10px #ccc;
-    transition: 1s;
-    .transition(all,0.5s);
-    li{
-      font-family: 'microsoft yahei';
-    }
-  }
+	.neeya-slide {
+		z-index: 7;
+		margin-top: 45px;
+		position: fixed;
+		width: 10%;
+		min-width: 135px;
+		//    float: left;
+		box-shadow: 2px 0 10px #ccc;
+		transition: 1s;
+		.transition(all, 0.5s);
+		li {
+			font-family: 'microsoft yahei';
+		}
+	}
 }
 
-.neeya-show-charts{
-  .transition(all,0.5s);
-  margin-top: 45px;
-  .td-hide{
-    display: none;
-  }
-  padding: 10px;
-  float: right;
+.neeya-show-charts {
+	.transition(all, 0.5s);
+	margin-top: 45px;
+	.td-hide {
+		display: none;
+	}
+	padding: 10px;
+	float: right;
 	.show-toolbar{
 		li{
 			font-size: 16px;
@@ -102,21 +112,21 @@
 			}
 		}
 	}
-  #neeya-table{
-    thead{
-      position: relative;
-    }
-    #dismiss{
-      cursor: pointer;
-    }
-    td{
-      text-align: center;
-    }
-    tr:nth-child(1){
-      th:nth-child(-n+2){
-          line-height: 50px;
-      }
-    }
+	#neeya-table {
+		thead {
+			position: relative;
+		}
+		#dismiss {
+			cursor: pointer;
+		}
+		td {
+			text-align: center;
+		}
+		tr:nth-child(1) {
+			th:nth-child(-n+2) {
+				line-height: 50px;
+			}
+		}
 		tbody{
 			tr{
 				&:nth-child(odd){
@@ -124,5 +134,5 @@
 				}
 			}
 		}
-  }
+	}
 }

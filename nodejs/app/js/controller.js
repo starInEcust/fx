@@ -26,15 +26,10 @@ var mainTableControl = ['$scope', 'dateData' , '$http', function mainTableContro
 	}
 	var date = objdate.getFullYear() + '0' + (objdate.getMonth() + 1) + day;
 	console.log(date);
-	dateData.getData(date).then(function (data) {
-		$scope.mydata = data;
-	});
-	$scope.$on('date.update', function (event) {
-		console.log('up');
 		$scope.mydata = dateData.data;
+		$scope.$apply();
 	});
-	//初始化要显示的数据表格
-	$scope.spanNum = 1;
+	//初始化要显示的数据表�	$scope.spanNum = 1;
 //	var localStorage = window.localStorage;
 //	$scope.num = localStorage.getItem('num');
 //	$scope.PushID = localStorage.getItem('PushID');
@@ -52,7 +47,7 @@ var mainTableControl = ['$scope', 'dateData' , '$http', function mainTableContro
 
 }];
 
-
-var chartControl = ['$scope', function chartControl($scope) {
-
+var navControl = ['$scope',function chartControl($scope){
+	$scope.isOneDay = true;
+	$scope.dateType = 'oneDay';
 }];
