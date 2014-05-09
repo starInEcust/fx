@@ -211,3 +211,6 @@ input {
 .neeya-show-charts #neeya-table tr:nth-child(1) th:nth-child(-n+2) {
   line-height: 50px;
 }
+.neeya-show-charts #neeya-table tbody tr:nth-child(odd) {
+  background-color: rgba(28, 183, 236, 0.1);
+}
