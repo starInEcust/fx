@@ -1,7 +1,8 @@
 /**
  * Created by Star on 14-3-26.
  */
-//时间选择器指令，属性为start，设置全局变量dateOne�//属性为dateBucket，设置全局变量dateTwo,两者都会调用dateData服务，获取data后通知刷新
+//时间选择器指令，属性为start，设置全局变量dateOne
+//属性为dateBucket，设置全局变量dateTwo,两者都会调用dateData服务，获取data后通知刷新
 app.directive('selectTime', ['dateData', '$rootScope', function (dateData, $rootScope) {
 	return{
 		restrict: "AE",
@@ -24,20 +25,9 @@ app.directive('selectTime', ['dateData', '$rootScope', function (dateData, $root
                     if(oldDate == Date){return}
                     oldDate = Date;
 					dateData.getData();
-					//这里有个非常奇怪的$apply问题�//
-					// if(getData == 'local'){
-//						console.log('local');
-//						$rootScope.$broadcast('local.update');
-//					}else{
-//						console.log('server');
-//						getData.then(function (data) {
-//							dateData.data = data;
-//							$rootScope.$broadcast('date.update');
-//						});
-//					}
 				}
 			});
-			//如果只有一天就返回
+			//如果只有一天就返回 这个地方顺序要修改一下
 			if(attrs.selectTime == 'oneDay'){
 				return;
 			}
@@ -53,7 +43,6 @@ app.directive('selectTime', ['dateData', '$rootScope', function (dateData, $root
 				}
 				return date;
 			}
-
 			var oldDate = getDate();
         }
     }
@@ -86,6 +75,7 @@ app.directive('dateType', ['$rootScope', function ($rootScope) {
 		}
 	}
 }]);
+//画图
 app.directive('makeChart', function () {
 	return {
 		restrict: 'E',
@@ -122,6 +112,7 @@ app.directive('makeChart', function () {
 
 	}
 });
+//不解释
 app.directive('activeLi', function () {
 	return {
 		restrict: 'AE',
@@ -146,6 +137,7 @@ app.directive('typeSelect', ['$rootScope', 'dateData', function ($rootScope, dat
 		}
 	};
 }]);
+//选择要显示的一列
 app.directive('tdSwitch', function () {
 	return {
 		restrict: 'AE',
@@ -190,7 +182,7 @@ app.directive('tdSwitch', function () {
 		}
 	};
 });
-
+//tr可以选中
 app.directive('trSelect', function () {
 	return {
 		restrict: 'AE',

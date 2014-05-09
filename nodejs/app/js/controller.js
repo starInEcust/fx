@@ -16,20 +16,19 @@ var mainControl = ['$scope', '$rootScope', function navControl($scope, $rootScop
 
 }];
 var mainTableControl = ['$scope', 'dateData' , '$http', function mainTableControl($scope, dateData, $http) {
+	//初始化时间
 	var objdate = new Date();
 	var day = objdate.getDate();
 	if (day < 10) {
-		console.log(day);
 		day = '0' + (day - 1);
-		console.log(day);
-
 	}
 	var date = objdate.getFullYear() + '0' + (objdate.getMonth() + 1) + day;
-	console.log(date);
+	//数据刷新监听器
 	$scope.$on( 'update', function( event ) {
 		console.log('update');
-		$scope.mydata = dateData.data;
-		$scope.$apply();
+		$scope.$apply(function(){
+			$scope.mydata = dateData.data;
+		});
 	});
 	//初始化要显示的数据表
 	$scope.spanNum = 1;
@@ -51,6 +50,8 @@ var mainTableControl = ['$scope', 'dateData' , '$http', function mainTableContro
 }];
 
 var navControl = ['$scope',function chartControl($scope){
+	//这个true是控制UI显示的
 	$scope.isOneDay = true;
+	//还有一个是timebucket
 	$scope.dateType = 'oneDay';
 }];
