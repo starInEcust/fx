@@ -82,6 +82,14 @@ input {
   width: 175px;
   text-align: center;
 }
+.metro .navigation-bar .select-type.element {
+  padding: 0;
+}
+.metro .navigation-bar .select-type .dropdown-toggle {
+  line-height: 45px;
+  height: 45px;
+  display: block;
+}
 .metro .navigation-bar .select-type .dropdown-toggle:after {
   content: '';
 }

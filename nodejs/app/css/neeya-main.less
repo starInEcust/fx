@@ -19,9 +19,18 @@
     .select-type{
       width: 175px;
       text-align: center;
-      .dropdown-toggle:after{
-        content: '';
-      }
+			&.element{
+				padding: 0;
+			}
+      .dropdown-toggle{
+				line-height: 45px;
+				height: 45px;
+				display: block;
+				&:after{
+					content: '';
+				}
+			}
+
       i{
         font-size: 12px !IMPORTANT;
       }
