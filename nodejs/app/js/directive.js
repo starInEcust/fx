@@ -121,10 +121,12 @@ app.directive('tdSwitch', function () {
 		link: function (scope, elem, attrs) {
 			scope.isLight = false;
 			elem.on('click', function () {
-				elem.toggleClass('buttonLight');
 				scope.$apply(function () {
 					if (attrs.tdSwitch) {
 						scope[attrs.tdSwitch] = !scope[attrs.tdSwitch];
+						elem.toggleClass('close-th');
+					}else{
+						elem.addClass('li-clicked').siblings().removeClass('li-clicked');
 					}
 					if (attrs.toggleAlluser == 'All') {
 						console.log(attrs.toggleAlluser);

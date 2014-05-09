@@ -2,7 +2,7 @@
 @import "functionLib";
 @import "var";
 @import "ngClass";
-@import "animate";
+//@import "animate";
 .metro{
   .navigation-bar{
     .element{
@@ -84,8 +84,12 @@
 			&:hover{
 				background-color: #00ff6c;
 			}
-			&.buttonLight{
+			&.close-th{
+				background-color: #ae00ff;
 				float: right;
+			}
+			&.li-clicked{
+				background-color: #00ff6c;
 			}
 		}
 	}
@@ -107,7 +111,7 @@
 		tbody{
 			tr{
 				&:nth-child(odd){
-					background-color: rgba(28,183,236,0.1);
+					background-color: rgba(28, 183, 236, 0.1);
 				}
 			}
 		}
