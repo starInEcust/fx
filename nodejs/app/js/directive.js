@@ -119,30 +119,37 @@ app.directive('tdSwitch', function () {
 		replace: true,
 //		transclude: true,
 		link: function (scope, elem, attrs) {
-			scope.isLight = false;
+//			if(scope[attrs.tdSwitch] == 'true'){
+//				elem.addClass('close-th');
+//			}
 			elem.on('click', function () {
 				scope.$apply(function () {
+//					var localStorage = window.localStorage;
 					if (attrs.tdSwitch) {
 						scope[attrs.tdSwitch] = !scope[attrs.tdSwitch];
+//						localStorage.setItem(attrs.tdSwitch,scope[attrs.tdSwitch]);
 						elem.toggleClass('close-th');
 					}else{
 						elem.addClass('li-clicked').siblings().removeClass('li-clicked');
-					}
-					if (attrs.toggleAlluser == 'All') {
-						console.log(attrs.toggleAlluser);
-						scope.all = false;
-						scope.user = true;
-						scope.spanNum = 2;
-					} else if (attrs.toggleAlluser == 'USER') {
-						console.log(attrs.toggleAlluser);
-						scope.all = true;
-						scope.user = false;
-						scope.spanNum = 2;
-					} else {
-						console.log(attrs.toggleAlluser);
-						scope.all = false;
-						scope.user = false;
-						scope.spanNum = 1;
+						if (attrs.toggleAlluser == 'All') {
+							console.log(attrs.toggleAlluser);
+							scope.all = false;
+							scope.user = true;
+							scope.spanNum = 2;
+						} else if (attrs.toggleAlluser == 'USER') {
+							console.log(attrs.toggleAlluser);
+							scope.all = true;
+							scope.user = false;
+							scope.spanNum = 2;
+						} else {
+							console.log(attrs.toggleAlluser);
+							scope.all = false;
+							scope.user = false;
+							scope.spanNum = 1;
+						}
+//						localStorage.setItem('All',scope.all);
+//						localStorage.setItem('USER',scope.user);
+//						localStorage.setItem('spanNum',scope.spanNum);
 					}
 				});
 			});
