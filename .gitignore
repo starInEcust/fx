@@ -226,3 +226,5 @@ nodejs/app/js/*.BASE.*.js
 nodejs/app/js/*.REMOTE.*.js
 nodejs/app/css/neeya-main.css
 nodejs/app/css/neeya-main.less.*
+nodejs/app/css/*.css
+nodejs/app/css/*.css
