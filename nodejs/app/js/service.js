@@ -5,22 +5,8 @@ app.factory('dateData', ['$http', '$q', '$rootScope', 'dataSelecter' , 'makeOneD
 	return {
 		data: '',
 		getData: function () {
-			var flag = null;
 			var self = this;
-			console.log($rootScope.chartType);
-			switch ($rootScope.chartType) {
-				case '输入法OEM版数据':
-					flag = 'IME_OEM';
-					break;
-				case '输入法ONLINE数据':
-					flag = 'IME_ONLINE';
-					break;
-				case '号码助手数据':
-					flag = 'dialer';
-					break;
-				default :
-					console.log('dataType is error');
-			}
+			makeOneDayLocal.listenSocket();
 			if (!$rootScope.dateEnd) {
 				var listengetOneday = $rootScope.$on('getOneDay',function(){
 					console.log('get.it');
@@ -28,7 +14,7 @@ app.factory('dateData', ['$http', '$q', '$rootScope', 'dataSelecter' , 'makeOneD
 					if(localData != null){
 					var needData = JSON.parse(localData);
 					needData = $.extend({}, needData);
-					dataSelecter(needData, flag);
+					dataSelecter(needData);
 					self.data = needData;
 					console.log(self.data);
 						$rootScope.$broadcast('update');
@@ -63,26 +49,40 @@ app.factory('dateData', ['$http', '$q', '$rootScope', 'dataSelecter' , 'makeOneD
 						mon = mon < 10 ? '0' + mon : mon;
 						dateStart = Number(startYear + mon +'01');
 					}
-					makeOneDayLocal(toDate.toString());
+					makeOneDayLocal.getOneDay(toDate.toString());
 					toDay++;
 					toDate++;
 				}
-				var getDataNum = 1;
+				var getDataNum = 0;
 				var listen = $rootScope.$on('getOneDay',function(){
 					getDataNum++;
-
-//					if(getDataNum == ){
-//
-//					}
+					if(getDataNum == dayPoor){
+						makeOneDayLocal.removeSocketListen();
+						listen();
+					}
 				});
 
 			}
 		}
 	};
 }]);
-app.factory('dataSelecter', function () {
-	return function (data, regexFlag) {
-		var regex = '/^' + regexFlag + '/i';
+app.factory('dataSelecter', ['$rootScope', function ($rootScope) {
+	return function (data) {
+		var flag = null;
+		switch ($rootScope.chartType) {
+			case '输入法OEM版数据':
+				flag = 'IME_OEM';
+				break;
+			case '输入法ONLINE数据':
+				flag = 'IME_ONLINE';
+				break;
+			case '号码助手数据':
+				flag = 'dialer';
+				break;
+			default :
+				console.log('dataType is error');
+		}
+		var regex = '/^' + flag + '/i';
 		regex = eval(regex);
 		var dataObj = data;
 		for (var key in dataObj) {
@@ -92,7 +92,7 @@ app.factory('dataSelecter', function () {
 		}
 		return dataObj;
 	}
-});
+}]);
 app.factory('makeOneDayLocal',['$rootScope', 'socket', function ($rootScope, socket) {
 	return {
 		getOneDay:function (date) {
@@ -103,17 +103,26 @@ app.factory('makeOneDayLocal',['$rootScope', 'socket', function ($rootScope, soc
 				$rootScope.$broadcast('getOneDay');
 			}else{
 				socket.emit('oneDay', {"Date": date});
-				socket.on('oneDayData', function (data) {
-					if (!data) {
-						console.log('noData');
-						$rootScope.$broadcast('getOneDay');
-						return false;
-					}
-					window.localStorage.setItem(date, data);
-					console.log('remote');
-					$rootScope.$broadcast('getOneDay');
-				});
+
 			}
+		},
+		listenSocket: function(){
+			socket.on('oneDayData', function (data) {
+				if (!data) {
+					console.log('noData');
+					$rootScope.$broadcast('getOneDay');
+					return false;
+				}
+				if(data.data){
+					window.localStorage.setItem(data.date, data.data);
+//					console.log('remote');
+//					console.log(date);
+					console.log(data.date);
+					console.log(data.data);
+					$rootScope.$broadcast('getOneDay');
+				}
+
+			});
 		},
 		removeSocketListen:function(){
 			socket.removeAllListeners();
