@@ -1,7 +1,7 @@
 /**
  * Created by Star on 14-3-26.
  */
-//时间选择器指令，属性为start，设置全局变量dateOne�//属性为dateBucket，设置全局变量dateTwo,两者都会调用dateData服务，获取data后通知刷新
+//时间选择器指令，属性为start，设置全局变量dateOne�//属性为dateBucket，设置全局变量dateTwo,两者都会调用dateData服务，获取data后通知刷新
 app.directive('selectTime', ['dateData', '$rootScope', function (dateData, $rootScope) {
 	return{
 		restrict: "AE",
@@ -12,7 +12,8 @@ app.directive('selectTime', ['dateData', '$rootScope', function (dateData, $root
 			'<button class="btn-date"></button>' +
 			'</div>',
 		link: function (scope, elem, attrs) {
-			//进行初始�            var objdate = new Date();
+			//进行初始�
+			var objdate = new Date();
 			elem.children('#datepicker').datepicker({
 				date: objdate.getFullYear() + '-' + '0' + (objdate.getMonth() + 1) + '-' + (objdate.getDate() - 1), // set init date
 				effect: "slide", // none, slide, fade
@@ -23,7 +24,8 @@ app.directive('selectTime', ['dateData', '$rootScope', function (dateData, $root
                     if(oldDate == Date){return}
                     oldDate = Date;
 					dateData.getData();
-					//这里有个非常奇怪的$apply问题�//					if(getData == 'local'){
+					//这里有个非常奇怪的$apply问题�//
+					// if(getData == 'local'){
 //						console.log('local');
 //						$rootScope.$broadcast('local.update');
 //					}else{
@@ -56,7 +58,7 @@ app.directive('selectTime', ['dateData', '$rootScope', function (dateData, $root
         }
     }
 }]);
-//选择是一个时间点还是一段时间指令，主要功能�//切换ICON，UI,改变navControl作用域下的dateType
+//选择是一个时间点还是一段时间指令，主要功能�//切换ICON，UI,改变navControl作用域下的dateType
 app.directive('dateType', ['$rootScope', function ($rootScope) {
 	return{
 		restrict: "AE",

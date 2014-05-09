@@ -26,10 +26,8 @@ var mainTableControl = ['$scope', 'dateData' , '$http', function mainTableContro
 	}
 	var date = objdate.getFullYear() + '0' + (objdate.getMonth() + 1) + day;
 	console.log(date);
-		$scope.mydata = dateData.data;
-		$scope.$apply();
-	});
-	//初始化要显示的数据表�	$scope.spanNum = 1;
+	//初始化要显示的数据表
+	$scope.spanNum = 1;
 //	var localStorage = window.localStorage;
 //	$scope.num = localStorage.getItem('num');
 //	$scope.PushID = localStorage.getItem('PushID');
