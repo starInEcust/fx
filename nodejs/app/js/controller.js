@@ -32,6 +32,7 @@ var mainTableControl = ['$scope', 'dateData' , '$http', function mainTableContro
 	});
 	//初始化要显示的数据表
 	$scope.spanNum = 1;
+	$scope.litype = 'switch';
 //	var localStorage = window.localStorage;
 //	$scope.num = localStorage.getItem('num');
 //	$scope.PushID = localStorage.getItem('PushID');

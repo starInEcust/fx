@@ -178,9 +178,11 @@ app.factory('makeOneDayLocal', ['$rootScope', 'socket', function ($rootScope, so
 		}
 	}
 }]);
-app.factory('chartData', ['$rootScope', function ($rootScope) {
+app.factory('chartData', ['$rootScope', 'dateData', function ($rootScope, dateData) {
 	return {
-
+		makeChartData: function(){
+			
+		}
 	}
 }]);
 //socket服务
