@@ -17,7 +17,7 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'view/chart1.html',
             controller: 'mainTableControl'
         }).
-        when('/refresh', {
+        when('/update', {
             templateUrl: 'view/update.html'
 //            controller: 'mainTableControl'
         }).
