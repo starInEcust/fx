@@ -4,7 +4,7 @@
 app.factory('dateData', ['$rootScope', 'dataSelecter' , 'makeOneDayLocal', function ($rootScope, dataSelecter, makeOneDayLocal) {
 	return {
 		data: '',
-		severalDays: [],
+		severalDays: {},
 		getData: function () {
 			var self = this;
 			//获取服务的一开始启动获取一天数据的监听器
@@ -74,12 +74,10 @@ app.factory('dateData', ['$rootScope', 'dataSelecter' , 'makeOneDayLocal', funct
 								var needData = JSON.parse(loopDate);
 								needData = $.extend({}, needData);
 								dataSelecter(needData);
-								var arrayObj = {};
-								arrayObj[thisDate] = needData;
-								self.severalDays.push(arrayObj);
-								console.log('push');
-
-								console.log(self.severalDays);
+//								var arrayObj = {};
+//								arrayObj[thisDate] = needData;
+								self.severalDays[thisDate] = needData;
+//								console.log(self.severalDays);
 							} else {
 								console.log('not find data:' + thisDate);
 							}
@@ -181,7 +179,17 @@ app.factory('makeOneDayLocal', ['$rootScope', 'socket', function ($rootScope, so
 app.factory('chartData', ['$rootScope', 'dateData', function ($rootScope, dateData) {
 	return {
 		makeChartData: function(){
-			
+			var getData = dateData.severalDays;
+			console.log(getData);
+			var xAxis = [];
+			var series = [];
+			$.each(getData,function(key,val){
+				xAxis.push(key);
+
+				series.push();
+			});
+			return
+//			return {xAxis:a,series:a};
 		}
 	}
 }]);
@@ -194,3 +202,5 @@ app.factory('a', ['$rootScope', function ($rootScope) {
 
 	}
 }]);
+
+

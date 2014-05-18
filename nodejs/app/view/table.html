@@ -1,10 +1,10 @@
 <div class="show-toolbar clearfix">
-    <ul class="control-li-type">
-        <li>选定数据</li>
-        <li>隐藏该列</li>
-    </ul>
+    <!--<ul class="control-li-type">-->
+        <!--<li>选定数据</li>-->
+        <!--<li>隐藏该列</li>-->
+    <!--</ul>-->
     <ul>
-        <li ={{litype}}>num</li>
+        <li td-switch="num">num</li>
         <li td-switch="PushID">PushID</li>
         <li td-switch="Click">Click</li>
         <li td-switch="Show">Show</li>
@@ -37,27 +37,27 @@
             <th ng-hide="Toastclose" rowspan="1" colspan="2">Toastclose</th>
             <th ng-hide="None" rowspan="1" colspan="2">None</th>
         </tr>
-        <tr>
-            <th colspan={{spanNum}} ng-hide="(Show || all)">ALL</th>
-            <th colspan={{spanNum}} ng-hide="(Show || user)">User</th>
-            <th colspan={{spanNum}} ng-hide="(Click || all)">ALL</th>
-            <th colspan={{spanNum}} ng-hide="(Click || user)">User</th>
-            <th colspan={{spanNum}} ng-hide="(ClickShow || all)">ALL</th>
-            <th colspan={{spanNum}} ng-hide="(ClickShow || user)">User</th>
-            <th colspan={{spanNum}} ng-hide="(DSTART || all)">ALL</th>
-            <th colspan={{spanNum}} ng-hide="(DSTART || user)">User</th>
-            <th colspan={{spanNum}} ng-hide="(DFINISH || all)">ALL</th>
-            <th colspan={{spanNum}} ng-hide="(DFINISH || user)">User</th>
-            <th colspan={{spanNum}} ng-hide="(ISTART || all)">ALL</th>
-            <th colspan={{spanNum}} ng-hide="(ISTART || user)">User</th>
-            <th colspan={{spanNum}} ng-hide="(IFINISH || all)">ALL</th>
-            <th colspan={{spanNum}} ng-hide="(IFINISH || user)">User</th>
-            <th colspan={{spanNum}} ng-hide="(Toastclick || all)">ALL</th>
-            <th colspan={{spanNum}}  ng-hide="(Toastclick || user)">User</th>
-            <th colspan={{spanNum}} ng-hide="(Toastclose || all)">ALL</th>
-            <th colspan={{spanNum}} ng-hide="(Toastclose || user)">User</th>
-            <th colspan={{spanNum}} ng-hide="(None || all)">ALL</th>
-            <th colspan={{spanNum}} ng-hide="(None || user)">User</th>
+        <tr class="selectChartData">
+            <th chardata-select chartdata-name="show" chartdata-type="all" colspan={{spanNum}} ng-hide="(Show || all)">ALL</th>
+            <th chardata-select chartdata-name="show" chartdata-type="user" colspan={{spanNum}} ng-hide="(Show || user)">User</th>
+            <th chardata-select chartdata-name="Click" chartdata-type="all" colspan={{spanNum}} ng-hide="(Click || all)">ALL</th>
+            <th chardata-select chartdata-name="Click" chartdata-type="user" colspan={{spanNum}} ng-hide="(Click || user)">User</th>
+            <th chardata-select chartdata-name="ClickShow" chartdata-type="all" colspan={{spanNum}} ng-hide="(ClickShow || all)">ALL</th>
+            <th chardata-select chartdata-name="ClickShow" chartdata-type="user" colspan={{spanNum}} ng-hide="(ClickShow || user)">User</th>
+            <th chardata-select chartdata-name="DSTART" chartdata-type="all" colspan={{spanNum}} ng-hide="(DSTART || all)">ALL</th>
+            <th chardata-select chartdata-name="DSTART" chartdata-type="user" colspan={{spanNum}} ng-hide="(DSTART || user)">User</th>
+            <th chardata-select chartdata-name="DFINISH" chartdata-type="all" colspan={{spanNum}} ng-hide="(DFINISH || all)">ALL</th>
+            <th chardata-select chartdata-name="DFINISH" chartdata-type="user" colspan={{spanNum}} ng-hide="(DFINISH || user)">User</th>
+            <th chardata-select chartdata-name="ISTART" chartdata-type="all" colspan={{spanNum}} ng-hide="(ISTART || all)">ALL</th>
+            <th chardata-select chartdata-name="ISTART" chartdata-type="user" colspan={{spanNum}} ng-hide="(ISTART || user)">User</th>
+            <th chardata-select chartdata-name="IFINISH" chartdata-type="all" colspan={{spanNum}} ng-hide="(IFINISH || all)">ALL</th>
+            <th chardata-select chartdata-name="IFINISH" chartdata-type="user" colspan={{spanNum}} ng-hide="(IFINISH || user)">User</th>
+            <th chardata-select chartdata-name="Toastclick" chartdata-type="all" colspan={{spanNum}} ng-hide="(Toastclick || all)">ALL</th>
+            <th chardata-select chartdata-name="Toastclick" chartdata-type="user" colspan={{spanNum}}  ng-hide="(Toastclick || user)">User</th>
+            <th chardata-select chartdata-name="Toastclose" chartdata-type="all" colspan={{spanNum}} ng-hide="(Toastclose || all)">ALL</th>
+            <th chardata-select chartdata-name="Toastclose" chartdata-type="user" colspan={{spanNum}} ng-hide="(Toastclose || user)">User</th>
+            <th chardata-select chartdata-name="None" chartdata-type="all" colspan={{spanNum}} ng-hide="(None || all)">ALL</th>
+            <th chardata-select chartdata-name="None" chartdata-type="user" colspan={{spanNum}} ng-hide="(None || user)">User</th>
         </tr>
     </thead>
     <tbody>
