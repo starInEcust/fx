@@ -23,9 +23,10 @@ var mainTableControl = ['$scope', 'dateData' , '$http', function mainTableContro
 		day = '0' + (day - 1);
 		console.log(day);
 
+	}else{
+		day = day - 1;
 	}
 	var date = objdate.getFullYear() + '0' + (objdate.getMonth() + 1) + day;
-	console.log(date);
 	dateData.getData(date).then(function (data) {
 		$scope.mydata = data;
 	});
