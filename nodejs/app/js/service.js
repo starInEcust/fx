@@ -178,17 +178,19 @@ app.factory('makeOneDayLocal', ['$rootScope', 'socket', function ($rootScope, so
 }]);
 app.factory('chartData', ['$rootScope', 'dateData', function ($rootScope, dateData) {
 	return {
+		usingData: {},
 		makeChartData: function(){
 			var getData = dateData.severalDays;
+			var self = this;
 			console.log(getData);
+			console.log(self.usingData);
 			var xAxis = [];
 			var series = [];
 			$.each(getData,function(key,val){
 				xAxis.push(key);
-
 				series.push();
 			});
-			return
+//			return;
 //			return {xAxis:a,series:a};
 		}
 	}

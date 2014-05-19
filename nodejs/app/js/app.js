@@ -7,7 +7,8 @@ app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.
         when('/table', {
             templateUrl: 'view/table.html',
-            controller: 'mainTableControl'
+            controller: 'mainTableControl',
+			reloadOnSearch: false
         }).
         when('/table-striped', {
             templateUrl: 'view/table-striped.html',
@@ -15,7 +16,8 @@ app.config(['$routeProvider', function ($routeProvider) {
         }).
         when('/chart1', {
             templateUrl: 'view/chart1.html',
-            controller: 'mainTableControl'
+            controller: 'mainTableControl',
+			reloadOnSearch: false
         }).
         when('/update', {
             templateUrl: 'view/update.html'
