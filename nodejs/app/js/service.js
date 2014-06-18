@@ -18,6 +18,9 @@ app.factory('dateData', ['$http', '$q','$rootScope', function ($http, $q, $rootS
                 case '号码助手数据':
                     flag = 'dialer';
                     break;
+				case '460OEM':
+					flag = 'Dialer_OEM';
+					break;
                 default :
                     console.log('dataType is error');
             }
