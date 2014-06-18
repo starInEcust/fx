@@ -14,7 +14,7 @@ var fs = require('fs');
 var ime = require('./models/IMEdata');
 var app = express();
 // all environments
-app.set('port', process.env.PORT || 3002);
+app.set('port', process.env.PORT || 8099);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.html',ejs.__express);
 app.set('view engine', 'html');
