@@ -1,5 +1,5 @@
 //var app = angular.module()
-var mainControl = ['$scope', '$rootScope', function navControl($scope, $rootScope) {
+var mainControl = ['$scope', '$rootScope', function mainControl($scope, $rootScope) {
 	//动画控制
 	$scope.isright = false;
 	$scope.isfull = true;
@@ -15,21 +15,33 @@ var mainControl = ['$scope', '$rootScope', function navControl($scope, $rootScop
 	$rootScope.chartType = '输入法ONLINE数据';
 
 }];
-var mainTableControl = ['$scope', 'dateData' , '$http', function mainTableControl($scope, dateData, $http) {
-	var objdate = new Date();
-	var day = objdate.getDate();
-	if (day < 10) {
-		console.log(day);
-		day = '0' + (day - 1);
-		console.log(day);
+var mainTableControl = ['$scope', '$rootScope','dateData' , '$http', function mainTableControl($scope, $rootScope, dateData, $http) {
+//	var objdate = new Date();
+//	var day = objdate.getDate();
+//	if (day < 10) {
+//		console.log(day);
+//		day = '0' + (day - 1);
+//		console.log(day);
+//
+//	}else{
+//		day = day - 1;
+//	}
+//	var date = objdate.getFullYear() + '0' + (objdate.getMonth() + 1) + day;
+	console.log($rootScope.dateStart);
 
-	}else{
-		day = day - 1;
-	}
-	var date = objdate.getFullYear() + '0' + (objdate.getMonth() + 1) + day;
-	dateData.getData(date).then(function (data) {
+	$scope.$on('getDateStart', function (event) {
+		dateData.getData($rootScope.dateStart).then(function (data) {
+			$scope.mydata = data;
+		});
+		console.log($rootScope.dateStart);
+	});
+	console.log($rootScope.dateStart);
+
+	dateData.getData($rootScope.dateStart).then(function (data) {
 		$scope.mydata = data;
 	});
+
+
 	$scope.$on('date.update', function (event) {
 		console.log('up');
 		$scope.mydata = dateData.data;

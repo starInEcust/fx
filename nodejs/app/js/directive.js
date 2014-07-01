@@ -14,14 +14,32 @@ app.directive('selectTable', ['dateData', '$rootScope', function (dateData, $roo
 			'</div>',
 		link: function (scope, elem, attrs) {
 			var objdate = new Date();
+			var year = objdate.getFullYear();
+			var month = objdate.getMonth() + 1;
+			var day = objdate.getDate() - 1;
+			if (objdate.getDate() == 1) {
+				month = month - 1;
+				var newDate = new Date();
+				newDate.setDate(objdate.getDate() - 1);
+				day = newDate.getDate();
+			} else if (objdate.getDate() < 10) {
+				day = '0' + day;
+			}
+			if (objdate.getMonth() < 10) {
+				month = '0' + month;
+			}
 
+			var date = year + '-' + month + '-' + day;
 
+			$rootScope.dateStart = (year+month+day);
+			$rootScope.$broadcast('getDateStart');
 			elem.children('#datepicker').datepicker({
-				date: objdate.getFullYear() + '-' + '0' + (objdate.getMonth() + 1) + '-' + (objdate.getDate() - 1), // set init date
+				date: date, // set init date
 				effect: "slide", // none, slide, fade
 				position: "bottom",
 				locale: 'en',
 				selected: function () {
+//					console.log(this.date);
 					if (oldDate == getDate()) {
 						return
 					}
@@ -42,6 +60,7 @@ app.directive('selectTable', ['dateData', '$rootScope', function (dateData, $roo
 			}
 
 			var oldDate = getDate();
+			console.log(getDate());
 
 
 		}
@@ -129,7 +148,7 @@ app.directive('tdSwitch', function () {
 						scope[attrs.tdSwitch] = !scope[attrs.tdSwitch];
 //						localStorage.setItem(attrs.tdSwitch,scope[attrs.tdSwitch]);
 						elem.toggleClass('close-th');
-					}else{
+					} else {
 						elem.addClass('li-clicked').siblings().removeClass('li-clicked');
 						if (attrs.toggleAlluser == 'All') {
 							console.log(attrs.toggleAlluser);
